@@ -1,23 +1,36 @@
 # MSnLib statistics report
 
-Generated (UTC): 2026-09-12 15:03:57
+Generated (UTC): 2026-09-13 05:40:30
 
-Dataset: `20241003_enamdisc_pos_msn.json`. Selection: `merge_type == SINGLE_BEST_SCAN`.
+Dataset: `msnlib/20241003_enamdisc_pos_msn.json`. Selection: `merge_type == SINGLE_BEST_SCAN`.
+
+Counting unit: one spectrum per (feature_id, first USI); repeated source annotations follow the last-record convention described in Block 1. All blocks use this shared cohort.
 
 Source notebook: [Explore_dataset.ipynb](Explore_dataset.ipynb).
 
-Statistics describe stored spectra after this selection. In summary tables, N counts finite observations; missing/nonfinite values are excluded. Q1 and Q3 use NumPy's default linear quantiles. A dash means unavailable or undefined.
+In summary tables, N counts finite observations; missing/nonfinite values are excluded. Q1 and Q3 use NumPy's default linear quantiles. A dash means unavailable or undefined.
 
 ## Block 1 — Spectrum inventory
 
-**Total spectra: 346,248.** Percentages use all loaded spectra.
+The input has 346,248 SINGLE_BEST_SCAN annotation records and 343,300 unique (feature_id, first USI) spectrum keys; 2,948 repeated-key entries are consolidated. All statistics below use unique spectra. Repeats must have identical peaks and acquisition paths. The last source annotation is retained, matching the former forest parser; this does not resolve compound/adduct ambiguity. Molecule and annotation-dependent statistics refer to that retained annotation.
+
+| MS level | Input annotation records | Unique spectra | Repeated-key excess |
+| --- | --- | --- | --- |
+| MS2 | 31,463 | 31,219 | 244 |
+| MS3 | 152,514 | 151,270 | 1,244 |
+| MS4 | 153,508 | 152,136 | 1,372 |
+| MS5 | 8,763 | 8,675 | 88 |
+
+[Repeated-key annotation audit (CSV)](MSnLib_stats_report_files/spectrum_annotation_key_audit.csv)
+
+**Total unique spectra: 343,300.** Percentages use all loaded spectra.
 
 | MS level | Spectra | % of all spectra |
 | --- | --- | --- |
-| MS2 | 31,463 | 9.09 |
-| MS3 | 152,514 | 44.05 |
-| MS4 | 153,508 | 44.33 |
-| MS5 | 8,763 | 2.53 |
+| MS2 | 31,219 | 9.09 |
+| MS3 | 151,270 | 44.06 |
+| MS4 | 152,136 | 44.32 |
+| MS5 | 8,675 | 2.53 |
 
 ## Block 2 — Molecules and adducts
 
@@ -25,22 +38,22 @@ Molecules use InChIKey, falling back to SMILES. Missing identifiers are excluded
 
 | Metric | Value |
 | --- | --- |
-| Unique molecules | 9,544 |
+| Unique molecules | 9,500 |
 | Spectra missing a molecule identifier | 0 |
 | Unique adducts | 7 |
-| Spectra with an adduct | 346,248 |
+| Spectra with an adduct | 343,300 |
 | Adduct presence (%) | 100.00 |
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Spectra per molecule | 9,544 | 0 | 36.28 | 35.00 | 28.00 | 43.00 | 1.00 | 175.00 |
+| Spectra per molecule | 9,500 | 0 | 36.14 | 35.00 | 28.00 | 43.00 | 1.00 | 175.00 |
 
 | MS level | Identified spectra | Mean spectra per molecule |
 | --- | --- | --- |
-| MS2 | 31,463 | 3.30 |
-| MS3 | 152,514 | 15.98 |
-| MS4 | 153,508 | 16.08 |
-| MS5 | 8,763 | 0.92 |
+| MS2 | 31,219 | 3.29 |
+| MS3 | 151,270 | 15.92 |
+| MS4 | 152,136 | 16.01 |
+| MS5 | 8,675 | 0.91 |
 
 ### Adduct frequencies
 
@@ -48,51 +61,51 @@ Blank/missing adducts are excluded from frequency tables. Percentages use all sp
 
 | Adduct | Spectra | % of all spectra |
 | --- | --- | --- |
-| [M+H]+ | 334,625 | 96.64 |
-| [M+H-H2O]+ | 5,800 | 1.68 |
-| [M+Na]+ | 1,868 | 0.54 |
-| [M+NH4]+ | 1,604 | 0.46 |
-| [M]+ | 1,159 | 0.33 |
-| [M-H2O]+ | 769 | 0.22 |
-| [M+H-2H2O]+ | 423 | 0.12 |
+| [M+H]+ | 332,892 | 96.97 |
+| [M+H-H2O]+ | 5,558 | 1.62 |
+| [M+Na]+ | 1,633 | 0.48 |
+| [M+NH4]+ | 1,315 | 0.38 |
+| [M]+ | 1,159 | 0.34 |
+| [M-H2O]+ | 492 | 0.14 |
+| [M+H-2H2O]+ | 251 | 0.07 |
 
 | MS level | Spectra with adduct | Total spectra | Adduct presence (%) |
 | --- | --- | --- | --- |
-| MS2 | 31,463 | 31,463 | 100.00 |
-| MS3 | 152,514 | 152,514 | 100.00 |
-| MS4 | 153,508 | 153,508 | 100.00 |
-| MS5 | 8,763 | 8,763 | 100.00 |
+| MS2 | 31,219 | 31,219 | 100.00 |
+| MS3 | 151,270 | 151,270 | 100.00 |
+| MS4 | 152,136 | 152,136 | 100.00 |
+| MS5 | 8,675 | 8,675 | 100.00 |
 
 | MS level | Adduct | Spectra | % of level |
 | --- | --- | --- | --- |
-| MS2 | [M+H]+ | 29,690 | 94.36 |
-| MS2 | [M+H-H2O]+ | 809 | 2.57 |
-| MS2 | [M+Na]+ | 528 | 1.68 |
-| MS2 | [M+NH4]+ | 188 | 0.60 |
-| MS2 | [M]+ | 133 | 0.42 |
-| MS2 | [M-H2O]+ | 71 | 0.23 |
-| MS2 | [M+H-2H2O]+ | 44 | 0.14 |
-| MS3 | [M+H]+ | 146,719 | 96.20 |
-| MS3 | [M+H-H2O]+ | 3,106 | 2.04 |
-| MS3 | [M+Na]+ | 924 | 0.61 |
-| MS3 | [M+NH4]+ | 726 | 0.48 |
-| MS3 | [M]+ | 507 | 0.33 |
-| MS3 | [M-H2O]+ | 336 | 0.22 |
-| MS3 | [M+H-2H2O]+ | 196 | 0.13 |
-| MS4 | [M+H]+ | 149,613 | 97.46 |
-| MS4 | [M+H-H2O]+ | 1,826 | 1.19 |
-| MS4 | [M+NH4]+ | 658 | 0.43 |
+| MS2 | [M+H]+ | 29,550 | 94.65 |
+| MS2 | [M+H-H2O]+ | 790 | 2.53 |
+| MS2 | [M+Na]+ | 510 | 1.63 |
+| MS2 | [M+NH4]+ | 160 | 0.51 |
+| MS2 | [M]+ | 133 | 0.43 |
+| MS2 | [M-H2O]+ | 50 | 0.16 |
+| MS2 | [M+H-2H2O]+ | 26 | 0.08 |
+| MS3 | [M+H]+ | 145,981 | 96.50 |
+| MS3 | [M+H-H2O]+ | 3,002 | 1.98 |
+| MS3 | [M+Na]+ | 832 | 0.55 |
+| MS3 | [M+NH4]+ | 593 | 0.39 |
+| MS3 | [M]+ | 507 | 0.34 |
+| MS3 | [M-H2O]+ | 238 | 0.16 |
+| MS3 | [M+H-2H2O]+ | 117 | 0.08 |
+| MS4 | [M+H]+ | 148,807 | 97.81 |
+| MS4 | [M+H-H2O]+ | 1,714 | 1.13 |
+| MS4 | [M+NH4]+ | 538 | 0.35 |
 | MS4 | [M]+ | 499 | 0.33 |
-| MS4 | [M+Na]+ | 410 | 0.27 |
-| MS4 | [M-H2O]+ | 327 | 0.21 |
-| MS4 | [M+H-2H2O]+ | 175 | 0.11 |
-| MS5 | [M+H]+ | 8,603 | 98.17 |
-| MS5 | [M+H-H2O]+ | 59 | 0.67 |
-| MS5 | [M-H2O]+ | 35 | 0.40 |
-| MS5 | [M+NH4]+ | 32 | 0.37 |
+| MS4 | [M+Na]+ | 290 | 0.19 |
+| MS4 | [M-H2O]+ | 188 | 0.12 |
+| MS4 | [M+H-2H2O]+ | 100 | 0.07 |
+| MS5 | [M+H]+ | 8,554 | 98.61 |
+| MS5 | [M+H-H2O]+ | 52 | 0.60 |
+| MS5 | [M+NH4]+ | 24 | 0.28 |
 | MS5 | [M]+ | 20 | 0.23 |
+| MS5 | [M-H2O]+ | 16 | 0.18 |
 | MS5 | [M+H-2H2O]+ | 8 | 0.09 |
-| MS5 | [M+Na]+ | 6 | 0.07 |
+| MS5 | [M+Na]+ | 1 | 0.01 |
 
 ## Block 3 — Peak statistics
 
@@ -100,11 +113,11 @@ Peak counts use `len(spectrum.peaks)` and include empty spectra as zero.
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| All spectra | 346,248 | 0 | 15.26 | 9.00 | 4.00 | 20.00 | 2.00 | 271.00 |
-| MS2 | 31,463 | 0 | 27.70 | 21.00 | 13.00 | 36.00 | 2.00 | 271.00 |
-| MS3 | 152,514 | 0 | 18.68 | 13.00 | 6.00 | 24.00 | 2.00 | 246.00 |
-| MS4 | 153,508 | 0 | 9.55 | 6.00 | 3.00 | 12.00 | 2.00 | 182.00 |
-| MS5 | 8,763 | 0 | 10.90 | 7.00 | 4.00 | 13.00 | 2.00 | 126.00 |
+| All spectra | 343,300 | 0 | 15.24 | 9.00 | 4.00 | 20.00 | 2.00 | 271.00 |
+| MS2 | 31,219 | 0 | 27.70 | 21.00 | 13.00 | 36.00 | 2.00 | 271.00 |
+| MS3 | 151,270 | 0 | 18.66 | 13.00 | 6.00 | 24.00 | 2.00 | 246.00 |
+| MS4 | 152,136 | 0 | 9.54 | 6.00 | 3.00 | 12.00 | 2.00 | 182.00 |
+| MS5 | 8,675 | 0 | 10.87 | 7.00 | 4.00 | 13.00 | 2.00 | 126.00 |
 
 | Group | Empty spectra |
 | --- | --- |
@@ -122,8 +135,8 @@ Each peak contributes once. Relative intensities are normalized separately withi
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Peak m/z | 5,282,784 | 0 | 114.33 | 106.06 | 78.03 | 143.06 | 40.01 | 479.14 |
-| Relative intensity (%) | 5,282,784 | 0 | 16.34 | 3.16 | 0.83 | 15.38 | 0.01 | 100.00 |
+| Peak m/z | 5,233,289 | 0 | 114.35 | 106.06 | 78.03 | 143.06 | 40.01 | 479.14 |
+| Relative intensity (%) | 5,233,289 | 0 | 16.35 | 3.16 | 0.83 | 15.39 | 0.01 | 100.00 |
 
 ![Pooled peak m/z distribution](MSnLib_stats_report_files/peak_mz_distribution.png)
 
@@ -184,15 +197,15 @@ Use each MS3 spectrum's parsed MS2 parent and match the last `msn_precursor_mzs`
 
 | Coverage measure | Numerator | Denominator | Coverage (%) |
 | --- | --- | --- | --- |
-| MS2 spectra with at least one MS3 child | 10,933 | 31,463 | 34.75 |
-| Global MS2 peak coverage | 48,576 | 871,577 | 5.57 |
-| Peak coverage among MS2 spectra with MS3 children | 48,576 | 277,351 | 17.51 |
+| MS2 spectra with at least one MS3 child | 10,850 | 31,219 | 34.75 |
+| Global MS2 peak coverage | 48,576 | 864,713 | 5.62 |
+| Peak coverage among MS2 spectra with MS3 children | 48,576 | 275,169 | 17.65 |
 
 Global coverage uses all loaded MS2 peaks. Coverage among MS2 spectra with MS3 children uses only the peaks in MS2 spectra with at least one resolved MS3 child as its denominator; each linked peak still counts once. This is a pooled peak ratio within that subset. Per-spectrum coverage gives each nonempty MS2 spectrum equal weight, including zero coverage for spectra without links. Empty MS2 spectra have undefined coverage.
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Per-spectrum MS2 peak coverage (%) | 31,463 | 0 | 8.51 | 0.00 | 0.00 | 15.62 | 0.00 | 100.00 |
+| Per-spectrum MS2 peak coverage (%) | 31,219 | 0 | 8.51 | 0.00 | 0.00 | 15.62 | 0.00 | 100.00 |
 
 **Empty MS2 spectra (undefined coverage): 0.**
 
@@ -245,22 +258,22 @@ Parent statistics count unique MS2 parents and linked (parent, peak index) pairs
 
 | Parent MS2 CE | All MS2 | % of all MS2 | Active parents | % of active parents |
 | --- | --- | --- | --- | --- |
-| 15.00 | 2,813 | 8.94 | 2,750 | 25.35 |
-| 20.00 | 10,208 | 32.44 | 0 | 0.00 |
-| 30.00 | 6,173 | 19.62 | 5,875 | 54.15 |
-| 45.00 | 2,109 | 6.70 | 2,034 | 18.75 |
-| 60.00 | 10,154 | 32.27 | 185 | 1.71 |
+| 15.00 | 2,793 | 8.95 | 2,750 | 25.35 |
+| 20.00 | 10,128 | 32.44 | 0 | 0.00 |
+| 30.00 | 6,125 | 19.62 | 5,875 | 54.15 |
+| 45.00 | 2,093 | 6.70 | 2,034 | 18.75 |
+| 60.00 | 10,074 | 32.27 | 185 | 1.71 |
 | 75.00 | 6 | 0.02 | 6 | 0.06 |
 
 #### Activity and coverage by parent MS2 energy
 
 | Parent MS2 CE | All MS2 | Active | Active (%) | Peaks in active | Linked peaks | Peak coverage (%) | Intensity coverage (%) | Valid intensity parents |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 15.00 | 2,813 | 2,750 | 97.76 | 47,385 | 11,775 | 24.85 | 78.00 | 2,750 |
-| 20.00 | 10,208 | 0 | 0.00 | 0 | 0 | — | — | 0 |
-| 30.00 | 6,173 | 5,875 | 95.17 | 138,321 | 26,400 | 19.09 | 79.52 | 5,875 |
-| 45.00 | 2,109 | 2,034 | 96.44 | 75,553 | 9,475 | 12.54 | 69.98 | 2,034 |
-| 60.00 | 10,154 | 185 | 1.82 | 13,245 | 900 | 6.80 | 53.15 | 185 |
+| 15.00 | 2,793 | 2,750 | 98.46 | 47,385 | 11,775 | 24.85 | 78.00 | 2,750 |
+| 20.00 | 10,128 | 0 | 0.00 | 0 | 0 | — | — | 0 |
+| 30.00 | 6,125 | 5,875 | 95.92 | 138,321 | 26,400 | 19.09 | 79.52 | 5,875 |
+| 45.00 | 2,093 | 2,034 | 97.18 | 75,553 | 9,475 | 12.54 | 69.98 | 2,034 |
+| 60.00 | 10,074 | 185 | 1.84 | 13,245 | 900 | 6.80 | 53.15 | 185 |
 | 75.00 | 6 | 6 | 100.00 | 665 | 26 | 3.91 | 31.78 | 6 |
 
 #### MS2 energy choices within each feature forest
@@ -10564,18 +10577,18 @@ Each linked or unlinked peak contributes once; relative intensity uses its paren
 
 ### Molecule-level supervision coverage
 
-Denominator: all 9,544 identified molecules from Block 2, including zeros. Identity uses InChIKey, falling back to SMILES. Linked peaks remain distinct across different MS2 parents; repeated MS3 children of the same parent peak count once.
+Denominator: all 9,500 identified molecules from Block 2, including zeros. Identity uses InChIKey, falling back to SMILES. Linked peaks remain distinct across different MS2 parents; repeated MS3 children of the same parent peak count once.
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Unique linked MS2 peaks per molecule | 9,544 | 0 | 5.09 | 5.00 | 5.00 | 5.00 | 0.00 | 20.00 |
-| Active MS2 parents per molecule | 9,544 | 0 | 1.14 | 1.00 | 1.00 | 1.00 | 0.00 | 5.00 |
+| Unique linked MS2 peaks per molecule | 9,500 | 0 | 5.11 | 5.00 | 5.00 | 5.00 | 0.00 | 20.00 |
+| Active MS2 parents per molecule | 9,500 | 0 | 1.14 | 1.00 | 1.00 | 1.00 | 0.00 | 5.00 |
 
 | At least N linked peaks | Molecules | % of all identified molecules |
 | --- | --- | --- |
-| 1 | 9,408 | 98.58 |
-| 5 | 7,698 | 80.66 |
-| 10 | 295 | 3.09 |
+| 1 | 9,408 | 99.03 |
+| 5 | 7,698 | 81.03 |
+| 10 | 295 | 3.11 |
 
 Excluded for missing molecule ID: 0 active parents and 0 linked peaks.
 
@@ -10587,26 +10600,26 @@ Numeric summaries exclude missing/nonfinite values and report their counts. Miss
 
 | Metric | N | Missing/nonfinite | Mean | Median | Q1 | Q3 | Min | Max |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| MS2 — precursor_purity | 31,463 | 0 | 0.97 | 0.98 | 0.97 | 0.99 | 0.03 | 1.00 |
-| MS2 — quality_explained_signals | 31,440 | 23 | 0.81 | 0.86 | 0.72 | 0.94 | 0.07 | 1.00 |
-| MS2 — quality_explained_intensity | 31,440 | 23 | 0.96 | 0.99 | 0.97 | 1.00 | 0.01 | 1.00 |
-| MS2 — collision_energy | 31,463 | 0 | 36.11 | 30.00 | 20.00 | 60.00 | 15.00 | 75.00 |
-| MS2 — isolation_window | 31,463 | 0 | 1.20 | 1.20 | 1.20 | 1.20 | 1.20 | 1.20 |
-| MS3 — precursor_purity | 152,514 | 0 | 0.96 | 0.98 | 0.96 | 0.99 | 0.03 | 1.00 |
-| MS3 — quality_explained_signals | 149,669 | 2,845 | 0.92 | 1.00 | 0.90 | 1.00 | 0.01 | 1.00 |
-| MS3 — quality_explained_intensity | 149,669 | 2,845 | 0.97 | 1.00 | 0.99 | 1.00 | 0.00 | 1.00 |
-| MS3 — collision_energy | 152,514 | 0 | 40.04 | 40.00 | 20.00 | 60.00 | 20.00 | 60.00 |
-| MS3 — isolation_window | 152,514 | 0 | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 |
-| MS4 — precursor_purity | 153,508 | 0 | 0.96 | 0.98 | 0.97 | 0.99 | 0.03 | 1.00 |
-| MS4 — quality_explained_signals | 152,662 | 846 | 0.97 | 1.00 | 1.00 | 1.00 | 0.05 | 1.00 |
-| MS4 — quality_explained_intensity | 152,662 | 846 | 0.99 | 1.00 | 1.00 | 1.00 | 0.00 | 1.00 |
-| MS4 — collision_energy | 153,508 | 0 | 39.64 | 40.00 | 20.00 | 60.00 | 20.00 | 60.00 |
-| MS4 — isolation_window | 153,508 | 0 | 2.20 | 2.20 | 2.20 | 2.20 | 2.20 | 2.20 |
-| MS5 — precursor_purity | 8,763 | 0 | 0.97 | 0.98 | 0.97 | 0.99 | 0.49 | 1.00 |
-| MS5 — quality_explained_signals | 8,759 | 4 | 0.99 | 1.00 | 1.00 | 1.00 | 0.50 | 1.00 |
-| MS5 — quality_explained_intensity | 8,759 | 4 | 1.00 | 1.00 | 1.00 | 1.00 | 0.31 | 1.00 |
-| MS5 — collision_energy | 8,763 | 0 | 49.66 | 40.00 | 40.00 | 60.00 | 40.00 | 60.00 |
-| MS5 — isolation_window | 8,763 | 0 | 3.00 | 3.00 | 3.00 | 3.00 | 3.00 | 3.00 |
+| MS2 — precursor_purity | 31,219 | 0 | 0.97 | 0.98 | 0.97 | 0.99 | 0.03 | 1.00 |
+| MS2 — quality_explained_signals | 31,196 | 23 | 0.81 | 0.86 | 0.72 | 0.94 | 0.07 | 1.00 |
+| MS2 — quality_explained_intensity | 31,196 | 23 | 0.96 | 0.99 | 0.97 | 1.00 | 0.01 | 1.00 |
+| MS2 — collision_energy | 31,219 | 0 | 36.11 | 30.00 | 20.00 | 60.00 | 15.00 | 75.00 |
+| MS2 — isolation_window | 31,219 | 0 | 1.20 | 1.20 | 1.20 | 1.20 | 1.20 | 1.20 |
+| MS3 — precursor_purity | 151,270 | 0 | 0.96 | 0.98 | 0.96 | 0.99 | 0.03 | 1.00 |
+| MS3 — quality_explained_signals | 148,461 | 2,809 | 0.92 | 1.00 | 0.90 | 1.00 | 0.01 | 1.00 |
+| MS3 — quality_explained_intensity | 148,461 | 2,809 | 0.97 | 1.00 | 0.99 | 1.00 | 0.00 | 1.00 |
+| MS3 — collision_energy | 151,270 | 0 | 40.04 | 40.00 | 20.00 | 60.00 | 20.00 | 60.00 |
+| MS3 — isolation_window | 151,270 | 0 | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 | 2.00 |
+| MS4 — precursor_purity | 152,136 | 0 | 0.96 | 0.98 | 0.97 | 0.99 | 0.03 | 1.00 |
+| MS4 — quality_explained_signals | 151,301 | 835 | 0.97 | 1.00 | 1.00 | 1.00 | 0.05 | 1.00 |
+| MS4 — quality_explained_intensity | 151,301 | 835 | 0.99 | 1.00 | 1.00 | 1.00 | 0.00 | 1.00 |
+| MS4 — collision_energy | 152,136 | 0 | 39.63 | 40.00 | 20.00 | 60.00 | 20.00 | 60.00 |
+| MS4 — isolation_window | 152,136 | 0 | 2.20 | 2.20 | 2.20 | 2.20 | 2.20 | 2.20 |
+| MS5 — precursor_purity | 8,675 | 0 | 0.97 | 0.98 | 0.97 | 0.99 | 0.49 | 1.00 |
+| MS5 — quality_explained_signals | 8,671 | 4 | 0.99 | 1.00 | 1.00 | 1.00 | 0.50 | 1.00 |
+| MS5 — quality_explained_intensity | 8,671 | 4 | 1.00 | 1.00 | 1.00 | 1.00 | 0.31 | 1.00 |
+| MS5 — collision_energy | 8,675 | 0 | 49.66 | 40.00 | 40.00 | 60.00 | 40.00 | 60.00 |
+| MS5 — isolation_window | 8,675 | 0 | 3.00 | 3.00 | 3.00 | 3.00 | 3.00 | 3.00 |
 
 ### Chimeric spectra
 
@@ -10614,10 +10627,10 @@ Percentages use all spectra within each MS level. Unknown means neither PASSED n
 
 | MS level | CHIMERIC spectra | % of level | Unknown status |
 | --- | --- | --- | --- |
-| MS2 | 448 | 1.42 | 0 |
-| MS3 | 3,070 | 2.01 | 14 |
-| MS4 | 1,882 | 1.23 | 9 |
-| MS5 | 56 | 0.64 | 2 |
+| MS2 | 440 | 1.41 | 0 |
+| MS3 | 3,023 | 2.00 | 14 |
+| MS4 | 1,829 | 1.20 | 9 |
+| MS5 | 54 | 0.62 | 2 |
 
 ### Collision-energy and isolation-window frequencies
 
@@ -10627,48 +10640,92 @@ Only these frequency tables round values to three decimals to combine floating-p
 
 | MS level | Value | Spectra | % of level |
 | --- | --- | --- | --- |
-| MS2 | 15.000 | 2,813 | 8.941 |
-| MS2 | 20.000 | 10,208 | 32.444 |
-| MS2 | 30.000 | 6,173 | 19.620 |
-| MS2 | 45.000 | 2,109 | 6.703 |
-| MS2 | 60.000 | 10,154 | 32.273 |
+| MS2 | 15.000 | 2,793 | 8.946 |
+| MS2 | 20.000 | 10,128 | 32.442 |
+| MS2 | 30.000 | 6,125 | 19.619 |
+| MS2 | 45.000 | 2,093 | 6.704 |
+| MS2 | 60.000 | 10,074 | 32.269 |
 | MS2 | 75.000 | 6 | 0.019 |
-| MS3 | 20.000 | 50,237 | 32.939 |
-| MS3 | 40.000 | 51,717 | 33.910 |
-| MS3 | 60.000 | 50,560 | 33.151 |
-| MS4 | 20.000 | 51,194 | 33.349 |
-| MS4 | 40.000 | 53,909 | 35.118 |
-| MS4 | 60.000 | 48,405 | 31.533 |
-| MS5 | 40.000 | 4,532 | 51.717 |
-| MS5 | 60.000 | 4,231 | 48.283 |
+| MS3 | 20.000 | 49,824 | 32.937 |
+| MS3 | 40.000 | 51,297 | 33.911 |
+| MS3 | 60.000 | 50,149 | 33.152 |
+| MS4 | 20.000 | 50,743 | 33.354 |
+| MS4 | 40.000 | 53,427 | 35.118 |
+| MS4 | 60.000 | 47,966 | 31.528 |
+| MS5 | 40.000 | 4,486 | 51.712 |
+| MS5 | 60.000 | 4,189 | 48.288 |
 
 #### isolation_window
 
 | MS level | Value | Spectra | % of level |
 | --- | --- | --- | --- |
-| MS2 | 1.200 | 31,463 | 100.000 |
-| MS3 | 2.000 | 152,514 | 100.000 |
-| MS4 | 2.200 | 153,508 | 100.000 |
-| MS5 | 3.000 | 8,763 | 100.000 |
+| MS2 | 1.200 | 31,219 | 100.000 |
+| MS3 | 2.000 | 151,270 | 100.000 |
+| MS4 | 2.200 | 152,136 | 100.000 |
+| MS5 | 3.000 | 8,675 | 100.000 |
 
-## Block 7 — Research-ready subset
+## Block 7 — Peak-level pilot size
 
-The starting cohort is all loaded MS3 spectra. Each retained spectrum is an MS3 target paired with its MS2 parent; parents are not counted again. Filters are cumulative, and retention percentages use the starting MS3 count.
+Original MS3 denominator: **151,270 unique MS3 spectra** in the shared SINGLE_BEST_SCAN cohort. Original linked-peak denominator: **48,576 unique linked MS2 peaks** from Block 5 before pilot filters. Input annotation records sharing a spectrum key are counted once throughout.
 
-Valid identifiers are nonblank InChIKey or SMILES (no chemical validation). Valid peaks are nonempty and finite, with positive m/z, nonnegative intensities, and at least one positive intensity. The link filter also requires valid peaks and an identifier on the MS2 parent.
+A linked peak is (feature_id, MS2 parent USI, peak index). It remains in a stage when at least one MS3 child survives. Each surviving MS3 spectrum is counted separately, including several children of one peak; unresolved MS3 spectra contribute no linked peaks.
 
-Both parent and child must have `quality_chimeric == PASSED` and precursor purity >= 0.90 (editable proposed cutoff; purity values above 1 are excluded). Missing quality does not pass these filters.
+Filters are cumulative. Resolve MS2→MS3 links first, then require nonblank molecule identifiers and valid peaks on both parent and child. Valid peaks are nonempty/finite with positive m/z, nonnegative intensity, and positive total intensity. The non-chimeric filter requires quality_chimeric == PASSED on both; the purity ≥ 0.90 filter requires both purities within the cutoff–1 range. Missing quality does not pass.
 
-| Filter | Spectra remaining | Molecules remaining | Percentage retained (%) |
+| Filter | MS3 spectra remaining | Unique linked MS2 peaks remaining | Molecules remaining | % of original MS3 spectra retained | % of original linked peaks retained |
+| --- | --- | --- | --- | --- | --- |
+| Original unique MS3 spectra | 151,270 | 48,576 | 9,480 | 100.00 | 100.00 |
+| Resolved MS2→MS3 link | 140,613 | 48,576 | 9,408 | 92.95 | 100.00 |
+| Valid molecule identifiers (parent and child) | 140,613 | 48,576 | 9,408 | 92.95 | 100.00 |
+| Valid peaks (parent and child) | 140,613 | 48,576 | 9,408 | 92.95 | 100.00 |
+| Non-chimeric filter (parent and child PASSED) | 137,978 | 47,663 | 9,335 | 91.21 | 98.12 |
+| Purity ≥ 0.90 filter (parent and child) | 129,846 | 44,870 | 9,022 | 85.84 | 92.37 |
+| MAGMa annotation (pending) | — | — | — | — | — |
+
+**Pilot size: 44,870 unique linked MS2 peaks with 129,846 surviving MS3 spectra.**
+
+MAGMa annotation is pending; that row is unavailable. The pilot is a candidate subset.
+
+Molecule counts use retained source annotations, whose ambiguity is documented in the input audit; these are not resolved chemical assignments.
+
+### Reconciliation of the previous count discrepancies
+
+| Comparison | Input-record count | Unique-spectrum count | Repeated-key excess |
 | --- | --- | --- | --- |
-| Starting MS3 spectra | 152,514 | 9,525 | 100.00 |
-| Valid molecule identifier | 152,514 | 9,525 | 100.00 |
-| Valid peaks | 152,514 | 9,525 | 100.00 |
-| Resolved link + valid MS2 parent | 141,752 | 9,452 | 92.94 |
-| Non-chimeric parent and child | 139,070 | 9,378 | 91.19 |
-| Parent and child purity >= 0.90 | 130,879 | 9,066 | 85.81 |
-| MAGMa annotation (pending) | — | — | — |
+| Loaded versus parsed spectra | 346,248 | 343,300 | 2,948 |
+| Active MS2 parents | 10,933 | 10,850 | 83 |
+| Matched MS3 / original Block 7 resolved stage | 141,752 | 140,613 | 1,139 |
 
-**MS2–MS3 pairs retained: 130,879.**
+1. The parser previously keyed nodes by USI within each feature and kept the last record. The inventory counted all input annotation records, producing a 2,948-entry gap. The shared cohort now contains 343,300 unique spectra; 343,300 are parsed and 0 lack a feature ID. Repeated keys have identical peak/acquisition data but can carry alternate compound/adduct annotations.
 
-MAGMa annotation is pending; counts for that step are unavailable and the retained pairs are a candidate subset.
+2. The old active-parent list counted repeated source records, while the forest/dictionary counted unique parents. Its extra 83 entries repeated existing active-parent identifiers. All sections now use 10,850 active MS2 parents.
+
+3. Block 5 stored one matched link per MS3 key, but the original Block 7 filtered the raw list by membership in that dictionary. This counted 1,139 repeated MS3 records again. Both sections now use 140,613 resolved, peak-matched MS3 spectra before eligibility filters.
+
+[Repeated-key annotation audit (CSV)](MSnLib_stats_report_files/spectrum_annotation_key_audit.csv)
+
+## Bonus Block 8 — Presentation visuals
+
+![Spectra by MS Level](presentation_visuals/spectra_by_ms_level.png)
+
+[SVG](presentation_visuals/spectra_by_ms_level.svg)
+
+![MS2-MS3 Coverage](presentation_visuals/ms2_ms3_coverage.png)
+
+[SVG](presentation_visuals/ms2_ms3_coverage.svg)
+
+![MS3 Selection by Peak Rank](presentation_visuals/ms3_selection_by_peak_rank.png)
+
+[SVG](presentation_visuals/ms3_selection_by_peak_rank.svg)
+
+![Linked Peaks per Molecule](presentation_visuals/linked_peaks_per_molecule.png)
+
+[SVG](presentation_visuals/linked_peaks_per_molecule.svg)
+
+![Pilot Size](presentation_visuals/pilot_size.png)
+
+[SVG](presentation_visuals/pilot_size.svg)
+
+![Collision Energy](presentation_visuals/collision_energy.png)
+
+[SVG](presentation_visuals/collision_energy.svg)

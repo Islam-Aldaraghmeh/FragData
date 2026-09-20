@@ -1,0 +1,299 @@
+{
+  "description": "Unmodified prototype CPU GLACIER outputs; all normal/direct tensors and raw outputs were bitwise equal during freezing.",
+  "fixtures": [
+    {
+      "smiles": "F[C@H](Cl)Br",
+      "collision_energy": 25.0,
+      "adduct": "[M+H]+",
+      "instrument": "Orbitrap",
+      "records": {
+        "atoms": [
+          {
+            "symbol": "F",
+            "atomic_num": 9,
+            "degree": 1,
+            "formal_charge": 0,
+            "hybridization": 4,
+            "aromatic": false,
+            "hydrogens": 0,
+            "mass_hydrogens": 0,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.21716346761497565,
+            "atomic_mass": 18.99840322
+          },
+          {
+            "symbol": "C",
+            "atomic_num": 6,
+            "degree": 3,
+            "formal_charge": 0,
+            "hybridization": 4,
+            "aromatic": false,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "chirality": 2,
+            "gasteiger_charge": 0.2273885582621482,
+            "atomic_mass": 12.0
+          },
+          {
+            "symbol": "Cl",
+            "atomic_num": 17,
+            "degree": 1,
+            "formal_charge": 0,
+            "hybridization": 4,
+            "aromatic": false,
+            "hydrogens": 0,
+            "mass_hydrogens": 0,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.07337750090754028,
+            "atomic_mass": 34.96885268
+          },
+          {
+            "symbol": "Br",
+            "atomic_num": 35,
+            "degree": 1,
+            "formal_charge": 0,
+            "hybridization": 4,
+            "aromatic": false,
+            "hydrogens": 0,
+            "mass_hydrogens": 0,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.03369085433864818,
+            "atomic_mass": 78.9183371
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 1,
+            "type": 1,
+            "order": 1.0,
+            "conjugated": false,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "type": 1,
+            "order": 1.0,
+            "conjugated": false,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "type": 1,
+            "order": 1.0,
+            "conjugated": false,
+            "in_ring": false,
+            "ring_sizes": [],
+            "fused_ring": false,
+            "stereo": 0
+          }
+        ]
+      },
+      "tensor_fingerprint": "6f5a81a366b952a9eaab626786103171ef17328d284d5bd6e357a0ef4f78a60c"
+    },
+    {
+      "smiles": "c1cc[nH]c1",
+      "collision_energy": 35.0,
+      "adduct": "[M+H]+",
+      "instrument": "Orbitrap",
+      "records": {
+        "atoms": [
+          {
+            "symbol": "C",
+            "atomic_num": 6,
+            "degree": 2,
+            "formal_charge": 0,
+            "hybridization": 3,
+            "aromatic": true,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.044728066131323574,
+            "atomic_mass": 12.0
+          },
+          {
+            "symbol": "C",
+            "atomic_num": 6,
+            "degree": 2,
+            "formal_charge": 0,
+            "hybridization": 3,
+            "aromatic": true,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.044728066131323574,
+            "atomic_mass": 12.0
+          },
+          {
+            "symbol": "C",
+            "atomic_num": 6,
+            "degree": 2,
+            "formal_charge": 0,
+            "hybridization": 3,
+            "aromatic": true,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": 0.000495844728467949,
+            "atomic_mass": 12.0
+          },
+          {
+            "symbol": "N",
+            "atomic_num": 7,
+            "degree": 2,
+            "formal_charge": 0,
+            "hybridization": 3,
+            "aromatic": true,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": -0.3676367128834121,
+            "atomic_mass": 14.003074
+          },
+          {
+            "symbol": "C",
+            "atomic_num": 6,
+            "degree": 2,
+            "formal_charge": 0,
+            "hybridization": 3,
+            "aromatic": true,
+            "hydrogens": 1,
+            "mass_hydrogens": 1,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "chirality": 0,
+            "gasteiger_charge": 0.000495844728467949,
+            "atomic_mass": 12.0
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 1,
+            "type": 12,
+            "order": 1.5,
+            "conjugated": true,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "type": 12,
+            "order": 1.5,
+            "conjugated": true,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "type": 12,
+            "order": 1.5,
+            "conjugated": true,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 3,
+            "j": 4,
+            "type": 12,
+            "order": 1.5,
+            "conjugated": true,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "stereo": 0
+          },
+          {
+            "i": 4,
+            "j": 0,
+            "type": 12,
+            "order": 1.5,
+            "conjugated": true,
+            "in_ring": true,
+            "ring_sizes": [
+              5
+            ],
+            "fused_ring": false,
+            "stereo": 0
+          }
+        ]
+      },
+      "tensor_fingerprint": "246c214b01b63224bee6d083b8a6581f78f3b0ec8a5bfb274a2507b566185d7f"
+    }
+  ],
+  "batch_tensor_fingerprint": "e140635cb1716c294843ee55ccab9ad68e1cc572b070abe2e23731023d91b72b",
+  "ms_pred_commit": "67ba0f202305d4bed3134991dd4562fe1edb1763",
+  "checkpoint_sha256": "5a47cecca707d3abd5a49c7dbac99d100aa2a586d5d4f848f1e8e35140d7db11",
+  "source_sha256": {
+    "runtime.py": "40bf76fcb6d05adb7c2b8a457136c7c19a02f8e893c728e0723c52b81b3b2022",
+    "direct_input.py": "077e19dbc7600cb85d66f87351ee8169ee0eb714c166bc1a989c5ff3c1259998",
+    "run_equivalence.py": "44cd4002eed18ffd2695ad6f6741f4f6ac38d883cf934fdb2362369e3bea93ad"
+  },
+  "environment": {
+    "python": "3.10.20",
+    "system": "Darwin",
+    "machine": "arm64",
+    "numpy": "2.2.6",
+    "torch": "2.6.0",
+    "rdkit": "2025.03.6"
+  }
+}
