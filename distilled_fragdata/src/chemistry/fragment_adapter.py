@@ -87,10 +87,50 @@ class FragmentGlacierAdapter:
         self.enumeration_caps = enumeration_caps
 
     def prepare(self, candidate, collision_energy, instrument="Orbitrap"):
+        """Try the baseline first, then only the recovery enabled for its failure.
+
+        Both flags default to False on GlacierAPI. That configuration preserves
+        the original return schema as well as all original states and inputs.
+        Enabled configurations include route and configuration audit fields.
+        """
+        original = self.prepare_baseline(candidate, collision_energy, instrument)
+        settings = {name: getattr(self.glacier, name, False)
+                    for name in ("aromatic_fix", "radical_fix")}
+        if not any(settings.values()):
+            return original
+        baseline = {**original, "route": "baseline", "experimental": False,
+                    "baseline_reason": original["reason"], "recovery_settings": settings}
+        if original["states"]:
+            return baseline
+        if hasattr(candidate, "stripped"):
+            stripped = candidate.stripped
+        else:
+            stripped = candidate.get("stripped", candidate)
+        reason = original["reason"]
+        if settings["radical_fix"] and reason == "odd_electron_formula_outside_closed_shell_domain":
+            from src.chemistry._radical_enumeration import enumerate_radical_states, ROUTE
+            result = enumerate_radical_states(deepcopy(stripped), self.max_states,
+                                               **self.enumeration_caps)
+            inputs = [{"records": records_from_mol(Chem.MolFromSmiles(state["ionic_smiles"])),
+                       "collision_energy": float(collision_energy), "adduct": "[M]+",
+                       "instrument": instrument} for state in result["states"]]
+            result = {**result, "inputs": inputs, "route": ROUTE, "experimental": True}
+        elif (settings["aromatic_fix"] and reason == "no_valid_state_in_declared_domain"
+              and any(b["aromatic"] and float(b["order"]) == 1.5 for b in stripped["bonds"])):
+            from src.chemistry._aromatic_recovery import prepare_aromatic_recovery
+            result = prepare_aromatic_recovery(stripped, collision_energy, instrument,
+                max_states=self.max_states, **self.enumeration_caps)
+        else:
+            return baseline
+        return {**result, "baseline_reason": reason, "recovery_settings": settings,
+                "baseline_metadata": original["metadata"]}
+
+    def prepare_baseline(self, candidate, collision_energy, instrument="Orbitrap"):
         """Return the complete enumeration audit and one GLACIER input per state.
 
         Accept a FragmentCandidate, a prototype candidate with ``stripped``, or
         the exact five-field stripped record. No source local H/Q enters search.
+        This explicit baseline method ignores model recovery flags.
         """
         if hasattr(candidate, "stripped"):
             stripped = candidate.stripped

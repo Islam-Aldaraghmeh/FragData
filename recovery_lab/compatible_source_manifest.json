@@ -1,0 +1,26 @@
+{
+  "recorded_utc": "2026-09-22T07:32:12.745264+00:00",
+  "description": "Regression-tested integration of opt-in aromatic_fix/radical_fix on GlacierAPI. The original snapshot_manifest.json remains unchanged.",
+  "original_manifest": "snapshot_manifest.json",
+  "validation_report": "ablation_regression.json",
+  "default_settings": {
+    "aromatic_fix": false,
+    "radical_fix": false
+  },
+  "production_files_sha256": {
+    "distilled_fragdata/src/chemistry/_aromatic_recovery.py": "2eeef4d36654e856ec3a065795a2addeb64152d65f33942c17323622480e92bf",
+    "distilled_fragdata/src/chemistry/_enumeration.py": "37c64c3646ad9a3c35ac3a5f6d66def396789d9324df4368006135db9fc7539a",
+    "distilled_fragdata/src/chemistry/_radical_enumeration.py": "f1fb5d1322a09293f30781cc067139a28e1d7028a47fea667d4af3be2c353d4f",
+    "distilled_fragdata/src/chemistry/_state_graph.py": "b70180cee46ef7a727e3ad31798bc2a63c18f850be433a7a1899a04aa54b596f",
+    "distilled_fragdata/src/chemistry/formula.py": "b6ba3b0c1cd7f57989c606479438bab93e3d363caddad0a1bf9f243c54971965",
+    "distilled_fragdata/src/chemistry/fragment_adapter.py": "d35c24d9c2398112bb8402572a629f884caf58a81d1bf01dd69824ccad6a9bd0",
+    "distilled_fragdata/src/data/candidate_bags.py": "08de79de0a1dab0934c024b4851da1b8004db8d3dc58559a0368e39802f12690",
+    "distilled_fragdata/src/data/msnlib.py": "df588f68c12b2ef7a01e49d071869f070ba99b7d6d4d7b128b8782cb86ec918f",
+    "distilled_fragdata/src/experiments/ms3_candidate_support.py": "949af040b707d95571c333829e952815712f8f708591c5cbd8c5f78ba7cd7e5b",
+    "distilled_fragdata/src/models/_direct_input.py": "5a87dee03cb7a63ff41ba82df7e5dad55026b11f78ea030fa8e587d97da65797",
+    "distilled_fragdata/src/models/glacier_api.py": "6bc53d9bafc1615d17c5cd992929263b817f0ce52fdb458ae53ee09160e47797",
+    "distilled_fragdata/src/spectra/metrics.py": "e507d02d75cc579668eb1405bdcc3a3d9d64d04ebcbb50b15337565186752064",
+    "distilled_fragdata/src/spectra/spectrum.py": "6cf4e1a239ab430490aa20ea15fee7749ca98895f2ca27731dd19b5730612acf",
+    "distilled_fragdata/src/utils/prediction_cache.py": "a96b0a006583cf7b801c4c5a50dd4c9191cdaed084ae8303021cf68f08496984"
+  }
+}

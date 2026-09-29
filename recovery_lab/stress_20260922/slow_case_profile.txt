@@ -1,0 +1,33 @@
+         2965525 function calls (2866799 primitive calls) in 15.321 seconds
+
+   Ordered by: cumulative time
+   List reduced from 213 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000   15.321   15.321 fragment_adapter.py:89(prepare)
+        1    0.000    0.000   15.321   15.321 fragment_adapter.py:128(prepare_baseline)
+        1    0.000    0.000   15.319   15.319 _enumeration.py:17(enumerate_microstates)
+  96519/1   14.757    0.000   15.294   15.294 _enumeration.py:91(visit)
+     4638    0.006    0.000    0.479    0.000 _state_graph.py:135(_validate_state)
+     4638    0.006    0.000    0.393    0.000 _state_graph.py:57(_graph_record)
+   309626    0.042    0.000    0.333    0.000 __init__.py:78(__iter__)
+   296366    0.050    0.000    0.283    0.000 __init__.py:65(__getitem__)
+     4638    0.082    0.000    0.215    0.000 _state_graph.py:60(<listcomp>)
+   310217    0.033    0.000    0.159    0.000 {built-in method builtins.len}
+     4638    0.035    0.000    0.152    0.000 _state_graph.py:58(<listcomp>)
+   309626    0.042    0.000    0.126    0.000 __init__.py:60(__len__)
+     2154    0.003    0.000    0.062    0.000 {built-in method builtins.sum}
+   206736    0.059    0.000    0.059    0.000 __init__.py:87(_sizeCalc)
+   189508    0.049    0.000    0.049    0.000 __init__.py:90(_getRDKitItem)
+      494    0.001    0.000    0.035    0.000 _state_graph.py:127(_counts_from_mol)
+   106858    0.032    0.000    0.032    0.000 __init__.py:99(_getRDKitItem)
+      494    0.003    0.000    0.031    0.000 _state_graph.py:187(_chemistry_rank)
+1405/1144    0.002    0.000    0.030    0.000 {built-in method builtins.any}
+   116150    0.030    0.000    0.030    0.000 __init__.py:96(_sizeCalc)
+        4    0.000    0.000    0.024    0.006 glacier_api.py:54(_feature_hash)
+        4    0.000    0.000    0.020    0.005 glacier_api.py:42(build_batch)
+        4    0.001    0.000    0.019    0.005 _direct_input.py:178(build_batch)
+        4    0.000    0.000    0.018    0.005 _direct_input.py:183(<listcomp>)
+        4    0.009    0.002    0.018    0.005 _direct_input.py:89(graph_tensors)
+
+

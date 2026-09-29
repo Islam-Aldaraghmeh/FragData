@@ -1,0 +1,16 @@
+{
+  "seed": 20260922,
+  "collision_energy": 60.0,
+  "max_states": 4,
+  "aromatic_fix": true,
+  "radical_fix": true,
+  "spectrum_time_limit": 90.0,
+  "candidate_phase_limit": 12,
+  "model_load_seconds": 3.906433833995834,
+  "checkpoint": {
+    "ms_pred_commit": "67ba0f202305d4bed3134991dd4562fe1edb1763",
+    "checkpoint_sha256": "5a47cecca707d3abd5a49c7dbac99d100aa2a586d5d4f848f1e8e35140d7db11"
+  },
+  "python": "3.10.20 (main, Mar  3 2026, 00:49:35) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "notebook_sha256": "dc841ada4eee60a4885e531bf320e36006c2ba5e23dc735d80976e5d3fa5c275"
+}

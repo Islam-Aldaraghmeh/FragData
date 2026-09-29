@@ -1,0 +1,29 @@
+Lightning automatically upgraded your loaded checkpoint from v1.6.5 to v2.5.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint checkpoints/best.ckpt`
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/.venv/lib/python3.10/site-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:182.)
+  output = torch._nested_tensor_from_mask(
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:94: RuntimeWarning: divide by zero encountered in matmul
+  single_scores = matrix.T @ aligned_target / (np.linalg.norm(matrix, axis=0) * target_norm)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:94: RuntimeWarning: overflow encountered in matmul
+  single_scores = matrix.T @ aligned_target / (np.linalg.norm(matrix, axis=0) * target_norm)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:94: RuntimeWarning: invalid value encountered in matmul
+  single_scores = matrix.T @ aligned_target / (np.linalg.norm(matrix, axis=0) * target_norm)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/.venv/lib/python3.10/site-packages/scipy/optimize/_nnls.py:93: RuntimeWarning: divide by zero encountered in matmul
+  x, rnorm, info = _nnls(A, b, maxiter)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/.venv/lib/python3.10/site-packages/scipy/optimize/_nnls.py:93: RuntimeWarning: overflow encountered in matmul
+  x, rnorm, info = _nnls(A, b, maxiter)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/.venv/lib/python3.10/site-packages/scipy/optimize/_nnls.py:93: RuntimeWarning: invalid value encountered in matmul
+  x, rnorm, info = _nnls(A, b, maxiter)
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: divide by zero encountered in matmul
+  mixed = matrix @ coefficients
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: overflow encountered in matmul
+  mixed = matrix @ coefficients
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: invalid value encountered in matmul
+  mixed = matrix @ coefficients
+{"spectrum_index": 0, "all_candidates": 134, "ms3_candidates": 20, "generation_seconds": 0.3812034170841798, "ms3_only_prediction_seconds": 3.943933584028855, "exact_prediction_checks": 20, "exact_unavailable_checks": 0, "uncompared_originals": {}, "all_exact": true, "same_model_repeat_cache_seconds": 0.001263042096979916, "plots": [{"fit_mixture": false, "seconds": 0.7447182920295745, "html_bytes": 1771311, "svg_images": 60, "mixture_cards": 0}, {"fit_mixture": true, "seconds": 0.6306824170751497, "html_bytes": 2118198, "svg_images": 68, "mixture_cards": 4}]}
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: divide by zero encountered in matmul
+  mixed = matrix @ coefficients
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: overflow encountered in matmul
+  mixed = matrix @ coefficients
+/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/distilled_fragdata/src/spectra/mixture.py:110: RuntimeWarning: invalid value encountered in matmul
+  mixed = matrix @ coefficients
+{"spectrum_index": 3, "all_candidates": 129, "ms3_candidates": 8, "generation_seconds": 0.5274033329915255, "ms3_only_prediction_seconds": 0.7413607910275459, "exact_prediction_checks": 8, "exact_unavailable_checks": 0, "uncompared_originals": {}, "all_exact": true, "same_model_repeat_cache_seconds": 0.00039170903619378805, "plots": [{"fit_mixture": false, "seconds": 0.19917954097036272, "html_bytes": 672871, "svg_images": 24, "mixture_cards": 0}, {"fit_mixture": true, "seconds": 0.22307325003203005, "html_bytes": 758442, "svg_images": 26, "mixture_cards": 1}]}

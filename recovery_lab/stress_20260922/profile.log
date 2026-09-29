@@ -1,0 +1,3 @@
+Lightning automatically upgraded your loaded checkpoint from v1.6.5 to v2.5.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint checkpoints/best.ckpt`
+{"profiled": false, "status": "ok", "reason": null, "route": "baseline", "seconds": 14.860643959022127}
+{"profiled": true, "status": "ok", "reason": null, "route": "baseline", "seconds": 15.321090167039074}

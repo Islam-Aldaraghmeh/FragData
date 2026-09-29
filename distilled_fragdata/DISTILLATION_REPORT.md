@@ -109,6 +109,13 @@ Each change is also documented next to the relevant module.
 
 ## Validation run
 
+This section records the original distillation run and its historical paths.
+Current development uses the repository-local `.venv/`, `vendor/ms-pred/`, and
+`checkpoints/best.ckpt`; no sibling prototype is required. From the repository
+root, the current equivalent command is
+`.venv/bin/python -m pytest distilled_fragdata/tests -q`. See
+[requirements.md](requirements.md) for setup and optional live-oracle overrides.
+
 Using the original Python 3.10.20 environment, RDKit 2025.03.6, NumPy 2.2.6,
 PyTorch 2.6.0 and verified public checkpoint on macOS arm64:
 

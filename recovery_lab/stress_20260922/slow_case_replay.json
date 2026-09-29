@@ -1,0 +1,516 @@
+{
+  "candidate_id": "candidate_f8075ab398f2c11ef0eeb0fc54fbd7137f29954d6e1c035145ef3e856d9853e2",
+  "mz": 296.111755,
+  "stripped": {
+    "atoms": [
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "N",
+        "aromatic": false
+      },
+      {
+        "element": "O",
+        "aromatic": false
+      },
+      {
+        "element": "O",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "N",
+        "aromatic": false
+      },
+      {
+        "element": "N",
+        "aromatic": true
+      },
+      {
+        "element": "N",
+        "aromatic": true
+      },
+      {
+        "element": "N",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": false
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      },
+      {
+        "element": "C",
+        "aromatic": true
+      }
+    ],
+    "bonds": [
+      {
+        "i": 0,
+        "j": 20,
+        "order": 2.0,
+        "aromatic": false
+      },
+      {
+        "i": 1,
+        "j": 16,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 2,
+        "j": 4,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 3,
+        "j": 17,
+        "order": 2.0,
+        "aromatic": false
+      },
+      {
+        "i": 4,
+        "j": 6,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 5,
+        "j": 7,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 5,
+        "j": 12,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 6,
+        "j": 16,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 7,
+        "j": 21,
+        "order": 2.0,
+        "aromatic": false
+      },
+      {
+        "i": 8,
+        "j": 9,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 8,
+        "j": 10,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 9,
+        "j": 11,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 10,
+        "j": 13,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 11,
+        "j": 18,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 12,
+        "j": 17,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 13,
+        "j": 18,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 14,
+        "j": 19,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 14,
+        "j": 20,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 15,
+        "j": 19,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 15,
+        "j": 21,
+        "order": 1.5,
+        "aromatic": true
+      },
+      {
+        "i": 16,
+        "j": 17,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 18,
+        "j": 19,
+        "order": 1.0,
+        "aromatic": false
+      },
+      {
+        "i": 20,
+        "j": 21,
+        "order": 1.5,
+        "aromatic": true
+      }
+    ],
+    "ionic_formula": {
+      "C": 15,
+      "H": 14,
+      "N": 5,
+      "O": 2
+    },
+    "charge": 1,
+    "precursor_mz": 296.111755
+  },
+  "has_ms3": false,
+  "original_prepare_seconds": 12.005992833990604,
+  "runs": [
+    {
+      "profiled": false,
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 20000,
+        "chemical_valid_assignments": 494,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 819,
+        "search_nodes": 96519,
+        "chemical_unique_states": 494,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 4144,
+          "sanitization_failed": 15362
+        },
+        "truncated": true,
+        "stop_reason": "leaf_budget",
+        "formula_mz": 296.11420110800003,
+        "dp_cache": {
+          "hits": 375983,
+          "misses": 819,
+          "maxsize": null,
+          "currsize": 819
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 14.859185
+      },
+      "baseline_metadata": null,
+      "states": [
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=CC[N-]C(=O)[C+](N)[CH+][CH+]O",
+          "feature_hash": "b24ed764ff6cf60221949927d451e1df51e5fde8020e9f9493973e48de02e8de",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=CC[N-]C(=O)[C+](N)[CH+][CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)C[CH+]O",
+          "feature_hash": "14e1f181a84e0954ec1d48f1aa8457c5288770707c1a9bbf989dc6a4ff12447e",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)C[CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)[CH+]CO",
+          "feature_hash": "7546f6c616cbe469f6b41ca54ee94d6685dd9e00069835bc2e4b6d21b41af5e4",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)[CH+]CO"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=[C+]C[N-]C(=O)C(N)[CH+][CH+]O",
+          "feature_hash": "3cef53fe1490d2ac3069f481a922f32f26487a923309d5849daa0660a4727118",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=[C+]C[N-]C(=O)C(N)[CH+][CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        }
+      ],
+      "seconds": 14.860643959022127
+    },
+    {
+      "profiled": true,
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 20000,
+        "chemical_valid_assignments": 494,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 819,
+        "search_nodes": 96519,
+        "chemical_unique_states": 494,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 4144,
+          "sanitization_failed": 15362
+        },
+        "truncated": true,
+        "stop_reason": "leaf_budget",
+        "formula_mz": 296.11420110800003,
+        "dp_cache": {
+          "hits": 375983,
+          "misses": 819,
+          "maxsize": null,
+          "currsize": 819
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 15.318536
+      },
+      "baseline_metadata": null,
+      "states": [
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=CC[N-]C(=O)[C+](N)[CH+][CH+]O",
+          "feature_hash": "b24ed764ff6cf60221949927d451e1df51e5fde8020e9f9493973e48de02e8de",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=CC[N-]C(=O)[C+](N)[CH+][CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)C[CH+]O",
+          "feature_hash": "14e1f181a84e0954ec1d48f1aa8457c5288770707c1a9bbf989dc6a4ff12447e",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)C[CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)[CH+]CO",
+          "feature_hash": "7546f6c616cbe469f6b41ca54ee94d6685dd9e00069835bc2e4b6d21b41af5e4",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=C[CH+][N-]C(=O)[C+](N)[CH+]CO"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=c1[n-]c(-c2ccccn2)nc1=[C+]C[N-]C(=O)C(N)[CH+][CH+]O",
+          "feature_hash": "3cef53fe1490d2ac3069f481a922f32f26487a923309d5849daa0660a4727118",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=c1[n-]c(-c2ccccn2)nc1=[C+]C[N-]C(=O)C(N)[CH+][CH+]O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 15,
+            "H": 14,
+            "N": 5,
+            "O": 2
+          },
+          "charge": 1,
+          "formula_mz": 296.11420110800003,
+          "adduct": "[M]+"
+        }
+      ],
+      "seconds": 15.321090167039074
+    }
+  ]
+}

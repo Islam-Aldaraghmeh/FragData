@@ -1,0 +1,5344 @@
+{
+  "index": 2,
+  "dataset": "20241003_enamdisc_pos_msn.json",
+  "root_offset": 418163076,
+  "offsets": [
+    418160984,
+    418163076,
+    418164885,
+    418170530,
+    418172816,
+    418175325,
+    418190346,
+    418192015,
+    418193744,
+    418203998,
+    418206448,
+    418208603,
+    418224047,
+    418226286,
+    418228593
+  ],
+  "feature_id": "20240502_pluskal_enamine_5010_P3_id_MSn_positive.mzML msn trees:7",
+  "smiles": "Cc1ccccc1CNc1c(Cl)ccc(C(N)=O)c1",
+  "scan": 345,
+  "precursor_mz": 275.094567,
+  "adduct": "[M+H]+",
+  "ms3_count": 12,
+  "status": "complete",
+  "candidate_rows": [
+    {
+      "bag_index": 0,
+      "candidate_index": 0,
+      "candidate_id": "candidate_2eb77d7f96c06d52e7a152a7686b59fb99caaa2d4facf239ecad2d517090356f",
+      "mz": 105.069633,
+      "has_ms3": true,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 2,
+            "j": 4,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 8,
+          "H": 9
+        },
+        "charge": 1,
+        "precursor_mz": 105.069633
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 6,
+        "chemical_valid_assignments": 2,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 67,
+        "search_nodes": 33,
+        "chemical_unique_states": 1,
+        "feature_unique_checked": 1,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 4
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 105.069876708,
+        "dp_cache": {
+          "hits": 92,
+          "misses": 67,
+          "maxsize": null,
+          "currsize": 67
+        },
+        "retained_states": 1,
+        "elapsed_seconds": 0.001641
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "[CH2+]c1ccccc1C",
+          "feature_hash": "b31386d4990a1710407a327527b193032a8ffb7b72f5596f492033831a304b02",
+          "chemistry_rank": [
+            1,
+            3,
+            "[CH2+]c1ccccc1C"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 8,
+            "H": 9
+          },
+          "charge": 1,
+          "formula_mz": 105.069876708,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.0019296669634059072,
+      "prediction_seconds": 0.01184633292723447,
+      "prediction_peaks": 36,
+      "prediction_valid": true,
+      "prediction_sha256": "1f3a1ebdf32eb6798beaf8f2f073a77f6095b634d754abc80845d0bba660aac5",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 1,
+      "candidate_index": 0,
+      "candidate_id": "candidate_3a3663b7433a44b87e8aa318b50a3903f658d6b51ea2db4e3015c9cc3fbb14cf",
+      "mz": 140.026229,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 3,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 7,
+          "Cl": 1,
+          "H": 7,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 140.026229
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 4,
+        "chemical_valid_assignments": 1,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 87,
+        "search_nodes": 23,
+        "chemical_unique_states": 1,
+        "feature_unique_checked": 1,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 3
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 140.026153324,
+        "dp_cache": {
+          "hits": 53,
+          "misses": 87,
+          "maxsize": null,
+          "currsize": 87
+        },
+        "retained_states": 1,
+        "elapsed_seconds": 0.001381
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "[CH2+]c1ccc(Cl)c(N)c1",
+          "feature_hash": "802aa4387b3b0e606fedf3c8b8a882758582c2f1db42d739c1b3b1d8ffb7b272",
+          "chemistry_rank": [
+            1,
+            3,
+            "[CH2+]c1ccc(Cl)c(N)c1"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.0016768750501796603,
+      "prediction_seconds": 0.01186433294788003,
+      "prediction_peaks": 100,
+      "prediction_valid": true,
+      "prediction_sha256": "9a33dd1f7200266faa40434d27c36801d46d02b9ffa914228ac0570cbf1b6ca0",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 1,
+      "candidate_index": 1,
+      "candidate_id": "candidate_7a1dce6682377d825c5b523399ef52446fc32ac699235a98e2ead2495c146cd8",
+      "mz": 140.026229,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 4,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 7,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 7,
+          "Cl": 1,
+          "H": 7,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 140.026229
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 30,
+        "chemical_valid_assignments": 30,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 113,
+        "search_nodes": 117,
+        "chemical_unique_states": 30,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {},
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 140.026153324,
+        "dp_cache": {
+          "hits": 269,
+          "misses": 113,
+          "maxsize": null,
+          "currsize": 113
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.007068
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=C([N-][CH+][CH2+])C(Cl)=[C+][CH2-]",
+          "feature_hash": "56484fbdc5133edf02fce811c181ba6e647be10602654c542f6505267d32a2ba",
+          "chemistry_rank": [
+            5,
+            14,
+            "C=C([N-][CH+][CH2+])C(Cl)=[C+][CH2-]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([N-][CH+][CH2+])C(Cl)=[C-][CH2+]",
+          "feature_hash": "63935df3c2b2274145fbe37883a5d5bba4d89b889ae0ab9d5ebddbd0a5ea0b6c",
+          "chemistry_rank": [
+            5,
+            14,
+            "C=C([N-][CH+][CH2+])C(Cl)=[C-][CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([N-][CH+][CH2-])C(Cl)=[C+][CH2+]",
+          "feature_hash": "90a36d41e55f24dc43878b7defd56a6acd3a874198e661adfbb623ad64fbf3ed",
+          "chemistry_rank": [
+            5,
+            14,
+            "C=C([N-][CH+][CH2-])C(Cl)=[C+][CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([N-][CH-][CH2+])C(Cl)=[C+][CH2+]",
+          "feature_hash": "c01515b8f82104771cc586fa1511922160f320b4a088a599423c80723306e237",
+          "chemistry_rank": [
+            5,
+            14,
+            "C=C([N-][CH-][CH2+])C(Cl)=[C+][CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.007732625002972782,
+      "prediction_seconds": 0.04404262499883771,
+      "prediction_peaks": 114,
+      "prediction_valid": true,
+      "prediction_sha256": "15114712b8bf5a8d3323932c50e015a3569ec4c56cb3540d41c1d9b3fcf6b31d",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 1,
+      "candidate_index": 2,
+      "candidate_id": "candidate_81d17a9c60edcabafccefcc037702fd4ebe0b3bd011ec64bc0c121ce7d00d78c",
+      "mz": 140.026229,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 2,
+            "j": 4,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 7,
+          "Cl": 1,
+          "H": 7,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 140.026229
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 5,
+        "chemical_valid_assignments": 1,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 90,
+        "search_nodes": 27,
+        "chemical_unique_states": 1,
+        "feature_unique_checked": 1,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 4
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 140.026153324,
+        "dp_cache": {
+          "hits": 73,
+          "misses": 90,
+          "maxsize": null,
+          "currsize": 90
+        },
+        "retained_states": 1,
+        "elapsed_seconds": 0.001457
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "[CH2+]Nc1ccccc1Cl",
+          "feature_hash": "ccda52d77c52365864864caade2aacb78e314e4717fb8794e19af05858a521d1",
+          "chemistry_rank": [
+            1,
+            3,
+            "[CH2+]Nc1ccccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.0017696249997243285,
+      "prediction_seconds": 0.011678040958940983,
+      "prediction_peaks": 75,
+      "prediction_valid": true,
+      "prediction_sha256": "036ad76819a77e065ab63d5f4c431a8ae84929f784f6c41936395b37233377c7",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 1,
+      "candidate_index": 3,
+      "candidate_id": "candidate_a9b208e2a66c8b684e5e52e38acefac2eea6e635c9bf6b613ace8dd3721c7935",
+      "mz": 140.026229,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 2,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 7,
+          "Cl": 1,
+          "H": 7,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 140.026229
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 5,
+        "chemical_valid_assignments": 1,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 87,
+        "search_nodes": 26,
+        "chemical_unique_states": 1,
+        "feature_unique_checked": 1,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 4
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 140.026153324,
+        "dp_cache": {
+          "hits": 72,
+          "misses": 87,
+          "maxsize": null,
+          "currsize": 87
+        },
+        "retained_states": 1,
+        "elapsed_seconds": 0.001476
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "N[CH+]c1ccc(Cl)cc1",
+          "feature_hash": "6379fda6df649df07ce1e14f0e8092a120c4baaec599e549907310ed357727bc",
+          "chemistry_rank": [
+            1,
+            3,
+            "N[CH+]c1ccc(Cl)cc1"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 7,
+            "Cl": 1,
+            "H": 7,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 140.026153324,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.0017831249861046672,
+      "prediction_seconds": 0.011963333003222942,
+      "prediction_peaks": 46,
+      "prediction_valid": true,
+      "prediction_sha256": "fe8eb9251c6350af29afed6764b3d6f70d7c8e1d6b4e96c0c839da0ed5645a40",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 2,
+      "candidate_index": 0,
+      "candidate_id": "candidate_04faeb7c327939639a1a8be2455251bc7a1a029d84723e2bf01740e2a57712fa",
+      "mz": 183.032196,
+      "has_ms3": true,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 8,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 10,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 8,
+          "Cl": 1,
+          "H": 8,
+          "N": 2,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 183.032196
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 4,
+        "chemical_valid_assignments": 1,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 99,
+        "search_nodes": 27,
+        "chemical_unique_states": 1,
+        "feature_unique_checked": 1,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 3
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 183.031966976,
+        "dp_cache": {
+          "hits": 59,
+          "misses": 99,
+          "maxsize": null,
+          "currsize": 99
+        },
+        "retained_states": 1,
+        "elapsed_seconds": 0.001984
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "[CH2+]Nc1cc(C(N)=O)ccc1Cl",
+          "feature_hash": "7c2e59ecc5aeb7a700a98c0a561facdc01cda17abd766d0c93faa6d5ca1738a7",
+          "chemistry_rank": [
+            1,
+            3,
+            "[CH2+]Nc1cc(C(N)=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.002364083076827228,
+      "prediction_seconds": 0.014863583957776427,
+      "prediction_peaks": 100,
+      "prediction_valid": true,
+      "prediction_sha256": "dc675fc06ea559005b7f84738855d09fe9e9d297d625338413feb3a0c0ab727d",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 2,
+      "candidate_index": 1,
+      "candidate_id": "candidate_4c38fd0c550fb50e3f7b3fadce976cd6ca6e3ba62740741934c7ec87d2bf23a7",
+      "mz": 183.032196,
+      "has_ms3": true,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 4,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 11,
+            "order": 2.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 8,
+          "Cl": 1,
+          "H": 8,
+          "N": 2,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 183.032196
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 200,
+        "chemical_valid_assignments": 200,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 217,
+        "search_nodes": 744,
+        "chemical_unique_states": 200,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {},
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 183.031966976,
+        "dp_cache": {
+          "hits": 1664,
+          "misses": 217,
+          "maxsize": null,
+          "currsize": 217
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.036116
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "CC[N-]CC(Cl)=[C+][C+]=[C+]C([NH-])=O",
+          "feature_hash": "09ce2307e211facf3748f79085c3c7ee20ee6f9b4065e51f2664bc98063964aa",
+          "chemistry_rank": [
+            5,
+            13,
+            "CC[N-]CC(Cl)=[C+][C+]=[C+]C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC[N-][CH+]C(Cl)=C[C+]=[C+]C([NH-])=O",
+          "feature_hash": "a453f65cb7f6a05644f831edd5bc21ca28f4b6fb6088161049dc793e1804c23f",
+          "chemistry_rank": [
+            5,
+            13,
+            "CC[N-][CH+]C(Cl)=C[C+]=[C+]C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC[N-][CH+]C(Cl)=[C+]C=[C+]C([NH-])=O",
+          "feature_hash": "005a0e6b79ef8b7b0fb574f9dc5eccb73beb3201ead86be8e463b9e12b51644e",
+          "chemistry_rank": [
+            5,
+            13,
+            "CC[N-][CH+]C(Cl)=[C+]C=[C+]C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC[N-][CH+]C(Cl)=[C+][C+]=CC([NH-])=O",
+          "feature_hash": "ca05ba8ad630306a7496e061b39c425437e7c55dcda365e32ff1f1ecbc4b9fa2",
+          "chemistry_rank": [
+            5,
+            13,
+            "CC[N-][CH+]C(Cl)=[C+][C+]=CC([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.03692708408925682,
+      "prediction_seconds": 0.05459895799867809,
+      "prediction_peaks": 165,
+      "prediction_valid": true,
+      "prediction_sha256": "fb1f29f987aa9a5487f6fcf563af6082cf8f580940b4c219832a06f7dca0a415",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 2,
+      "candidate_index": 2,
+      "candidate_id": "candidate_783d42ea991027d712dbe98c1a37fd7e545887cd4c54ffdb6be44e04dce95473",
+      "mz": 183.032196,
+      "has_ms3": true,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 11,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 9,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 8,
+          "Cl": 1,
+          "H": 8,
+          "N": 2,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 183.032196
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 60,
+        "chemical_valid_assignments": 60,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 178,
+        "search_nodes": 238,
+        "chemical_unique_states": 60,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {},
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 183.031966976,
+        "dp_cache": {
+          "hits": 550,
+          "misses": 178,
+          "maxsize": null,
+          "currsize": 178
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.015112
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=C(C=C([CH+]Cl)[N-][CH+][CH2+])C([NH-])=O",
+          "feature_hash": "76851ebe42caba8353575d7139eb1507725321e36410a885189cd9552cb4d5c3",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C(C=C([CH+]Cl)[N-][CH+][CH2+])C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([C+]=C(CCl)[N-][CH+][CH2+])C([NH-])=O",
+          "feature_hash": "c0b9458717c8e19cdedb2db59ac6f8d3044d4ec9b659aeb7a32d813e0a12eb1f",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C([C+]=C(CCl)[N-][CH+][CH2+])C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([C+]=C([CH+]Cl)[N-]C[CH2+])C([NH-])=O",
+          "feature_hash": "6c408966c57c1fca98571aa6ee4506358a1cbdc19e08ab94287973ed464572ed",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C([C+]=C([CH+]Cl)[N-]C[CH2+])C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C([C+]=C([CH+]Cl)[N-][CH+]C)C([NH-])=O",
+          "feature_hash": "8294af5e22e6e3b8a38acb3affbf473b6c8cf3930fef1fe33f20698ba5207026",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C([C+]=C([CH+]Cl)[N-][CH+]C)C([NH-])=O"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.01597658300306648,
+      "prediction_seconds": 0.05547449993900955,
+      "prediction_peaks": 147,
+      "prediction_valid": true,
+      "prediction_sha256": "1f44f5b1d904d000fbc16438dfede6ba23680801eb5e57caca5484ec3d53a253",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 2,
+      "candidate_index": 3,
+      "candidate_id": "candidate_ba8ce9a1d33004ab0eb12efbf6ec3b8114a77e7f345b925b7867da1c01849800",
+      "mz": 183.032196,
+      "has_ms3": true,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 9,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 11,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 9,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 8,
+          "Cl": 1,
+          "H": 8,
+          "N": 2,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 183.032196
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 60,
+        "chemical_valid_assignments": 60,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 178,
+        "search_nodes": 238,
+        "chemical_unique_states": 60,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {},
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 183.031966976,
+        "dp_cache": {
+          "hits": 550,
+          "misses": 178,
+          "maxsize": null,
+          "currsize": 178
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.014481
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=C(Cl)C(=C[CH+]C([NH-])=O)[N-][CH+][CH2+]",
+          "feature_hash": "a66a801a1cf6dd4c4ab1bbd57c7df1bc4407157672eee0640c51883705880009",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C(Cl)C(=C[CH+]C([NH-])=O)[N-][CH+][CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(Cl)C(=[C+]CC([NH-])=O)[N-][CH+][CH2+]",
+          "feature_hash": "f220bf4dcbc52bb47c0252d0bf1f0c808b24c4a534810dfd1cd0d064a0c653d1",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C(Cl)C(=[C+]CC([NH-])=O)[N-][CH+][CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(Cl)C(=[C+][CH+]C([NH-])=O)[N-]C[CH2+]",
+          "feature_hash": "d6fafb02e92f7321221f7930effbcea1a65683cc99ee5096c896ee74c22c505b",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C(Cl)C(=[C+][CH+]C([NH-])=O)[N-]C[CH2+]"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(Cl)C(=[C+][CH+]C([NH-])=O)[N-][CH+]C",
+          "feature_hash": "af435b0fcf45303aa5fac489e427cc5ff3a280f4c86424e9aba418b3a78eb647",
+          "chemistry_rank": [
+            5,
+            13,
+            "C=C(Cl)C(=[C+][CH+]C([NH-])=O)[N-][CH+]C"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 8,
+            "Cl": 1,
+            "H": 8,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 183.031966976,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.015331166912801564,
+      "prediction_seconds": 0.054625208023935556,
+      "prediction_peaks": 155,
+      "prediction_valid": true,
+      "prediction_sha256": "c06c6296f33400910b420e4b78491addea9f670113e5cfd39dee285a7680962d",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 3,
+      "candidate_index": 0,
+      "candidate_id": "candidate_4a80e694653419a649c51588e343b4c80ad770b8567dfb9cfe68d5e71cb284ad",
+      "mz": 206.035736,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 4,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 12,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 12,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 11,
+          "Cl": 1,
+          "H": 9,
+          "N": 1,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 206.035736
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 196,
+        "chemical_valid_assignments": 70,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 298,
+        "search_nodes": 1022,
+        "chemical_unique_states": 70,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 3,
+        "families_exhausted": [
+          1
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 126
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 206.036718008,
+        "dp_cache": {
+          "hits": 3334,
+          "misses": 298,
+          "maxsize": null,
+          "currsize": 298
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.028014
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "CC=C[CH+][N-]c1cc([C+]=O)ccc1Cl",
+          "feature_hash": "7f9b8ab5ed1529011151251e85bb1637e6a5508d96d844daaa598cac9c8fb0d1",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=C[CH+][N-]c1cc([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC=[C+]C[N-]c1cc([C+]=O)ccc1Cl",
+          "feature_hash": "64d2b04c8d63730bd12a83f7e7331ecf5fbf99b615cdbdf77069227f70bdc551",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=[C+]C[N-]c1cc([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC=[C+][CH+][N-]c1cc(C=O)ccc1Cl",
+          "feature_hash": "5485ea37fdabe83ec4addd1421ea7932248d80cfc2c92ad44354247f679bc879",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=[C+][CH+][N-]c1cc(C=O)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C[C+]=CC[N-]c1cc([C+]=O)ccc1Cl",
+          "feature_hash": "616d3ad67f145622ddb8658dc6a75adbe5e41390c8e7db3d566b372acb4a0bfb",
+          "chemistry_rank": [
+            3,
+            8,
+            "C[C+]=CC[N-]c1cc([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.02907412499189377,
+      "prediction_seconds": 0.06244291691109538,
+      "prediction_peaks": 205,
+      "prediction_valid": true,
+      "prediction_sha256": "69ecdc6b41db4a38ddffc36334b932a4558539fffae3b0572a359887822d6950",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 3,
+      "candidate_index": 1,
+      "candidate_id": "candidate_67865bd8162e9aba60b55a0dab1698ad17a95cb8b71d3c0f0a13be2e36b78583",
+      "mz": 206.035736,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 3,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 6,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 4,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 12,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 12,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 11,
+          "Cl": 1,
+          "H": 9,
+          "N": 1,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 206.035736
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 840,
+        "chemical_valid_assignments": 150,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 418,
+        "search_nodes": 3587,
+        "chemical_unique_states": 150,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 5,
+        "families_exhausted": [
+          1,
+          3
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 690
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 206.036718008,
+        "dp_cache": {
+          "hits": 11584,
+          "misses": 418,
+          "maxsize": null,
+          "currsize": 418
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.078944
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "CC[CH+][CH+][N-]c1[c-]c([C+]=O)ccc1Cl",
+          "feature_hash": "08e6433ca59d475b3aa34e36e9b856533a77cb1cd35e390a501c14994e87aeff",
+          "chemistry_rank": [
+            5,
+            14,
+            "CC[CH+][CH+][N-]c1[c-]c([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC[CH+][CH+][N-]c1cc([C+]=O)[c-]cc1Cl",
+          "feature_hash": "34385422d3895ddc974c9b24fa14ea707aa36807ab517dbc062482e382571ef8",
+          "chemistry_rank": [
+            5,
+            14,
+            "CC[CH+][CH+][N-]c1cc([C+]=O)[c-]cc1Cl"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC[CH+][CH+][N-]c1cc([C+]=O)c[c-]c1Cl",
+          "feature_hash": "3b6627dfd53d555f1178aff4410586f0f44bf83a3e3b4121d3918ca6a88d20ba",
+          "chemistry_rank": [
+            5,
+            14,
+            "CC[CH+][CH+][N-]c1cc([C+]=O)c[c-]c1Cl"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C[CH+]C[CH+][N-]c1[c-]c([C+]=O)ccc1Cl",
+          "feature_hash": "3b13b00ab2bec1387ae3401991f7fda8f2b7511fabe434ea1e9fdcedb83210b2",
+          "chemistry_rank": [
+            5,
+            14,
+            "C[CH+]C[CH+][N-]c1[c-]c([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 5,
+          "ionic_formula": {
+            "C": 11,
+            "Cl": 1,
+            "H": 9,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 206.036718008,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.08002216590102762,
+      "prediction_seconds": 0.06385462498292327,
+      "prediction_peaks": 139,
+      "prediction_valid": true,
+      "prediction_sha256": "d29aff0180e9cc227053784f721b7ae4393bf29de7c59e8f20b87ebf5b611386",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 4,
+      "candidate_index": 0,
+      "candidate_id": "candidate_13fc33dcbcc6e04ff0419848f25981a139b280d9718199dbbe45fbe41f63ca18",
+      "mz": 213.000823,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 13,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 10,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 9,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 11,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 11,
+            "j": 14,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 12,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 12,
+          "Cl": 1,
+          "H": 4,
+          "N": 1,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 213.000823
+      },
+      "metadata": {
+        "policy": "experimental-exact-graph-one-radical-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "local_radical_domain": [
+          0,
+          1
+        ],
+        "required_total_radicals": 1,
+        "max_states": 4,
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "leaves_checked": 0,
+        "dp_states": 1013,
+        "search_nodes": 0,
+        "minimum_abs_charge": null,
+        "accuracy_validated": false,
+        "elapsed_seconds": 0.000764,
+        "rejections": {},
+        "chemical_unique_states": 0,
+        "truncated": false,
+        "stop_reason": "no_valid_radical_state_in_declared_domain"
+      },
+      "status": "failed",
+      "reason": "no_valid_radical_state_in_declared_domain",
+      "route": "direct_radical_cation",
+      "baseline_reason": "odd_electron_formula_outside_closed_shell_domain",
+      "baseline_metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 0,
+        "chemical_valid_assignments": 0,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 0,
+        "search_nodes": 0,
+        "chemical_unique_states": 0,
+        "feature_unique_checked": 0,
+        "minimum_abs_charge": null,
+        "families_exhausted": [],
+        "rejections": {},
+        "truncated": false,
+        "stop_reason": null,
+        "formula_mz": 212.997592848,
+        "elapsed_seconds": 0.000104
+      },
+      "states": [],
+      "prepare_seconds": 0.0019486669916659594,
+      "outcome": "unavailable"
+    },
+    {
+      "bag_index": 4,
+      "candidate_index": 1,
+      "candidate_id": "candidate_45bd5f83b696aa5198b8004273c26d005d4f514a784adfb8a851f1b49095f269",
+      "mz": 213.000823,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 5,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 8,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 10,
+            "j": 11,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 11,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 12,
+            "j": 14,
+            "order": 2.0,
+            "aromatic": false
+          }
+        ],
+        "ionic_formula": {
+          "C": 12,
+          "Cl": 1,
+          "H": 4,
+          "N": 1,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 213.000823
+      },
+      "metadata": {
+        "policy": "experimental-exact-graph-one-radical-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "local_radical_domain": [
+          0,
+          1
+        ],
+        "required_total_radicals": 1,
+        "max_states": 4,
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "leaves_checked": 0,
+        "dp_states": 1031,
+        "search_nodes": 0,
+        "minimum_abs_charge": null,
+        "accuracy_validated": false,
+        "elapsed_seconds": 0.000921,
+        "rejections": {},
+        "chemical_unique_states": 0,
+        "truncated": false,
+        "stop_reason": "no_valid_radical_state_in_declared_domain"
+      },
+      "status": "failed",
+      "reason": "no_valid_radical_state_in_declared_domain",
+      "route": "direct_radical_cation",
+      "baseline_reason": "odd_electron_formula_outside_closed_shell_domain",
+      "baseline_metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 0,
+        "chemical_valid_assignments": 0,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 0,
+        "search_nodes": 0,
+        "chemical_unique_states": 0,
+        "feature_unique_checked": 0,
+        "minimum_abs_charge": null,
+        "families_exhausted": [],
+        "rejections": {},
+        "truncated": false,
+        "stop_reason": null,
+        "formula_mz": 212.997592848,
+        "elapsed_seconds": 5.5e-05
+      },
+      "states": [],
+      "prepare_seconds": 0.001266125007532537,
+      "outcome": "unavailable"
+    },
+    {
+      "bag_index": 5,
+      "candidate_index": 0,
+      "candidate_id": "candidate_13cd35d66db3fd4df80c3444a716fc520608620240b4578762cfcb998243ce05",
+      "mz": 232.090042,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 6,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 11,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 10,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 12,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 11,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 14,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 14,
+          "Cl": 1,
+          "H": 15,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 232.090042
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 288,
+        "chemical_valid_assignments": 120,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 308,
+        "search_nodes": 1609,
+        "chemical_unique_states": 120,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 3,
+        "families_exhausted": [
+          1
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 168
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 232.08875358,
+        "dp_cache": {
+          "hits": 5243,
+          "misses": 308,
+          "maxsize": null,
+          "currsize": 308
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.045875
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=C(C)C(=CC)[CH+][N-]c1cc([CH2+])ccc1Cl",
+          "feature_hash": "88efd833d01e985f2c1a40f84ca3642a81161b988a3e817d2af7e79934cfe737",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C(=CC)[CH+][N-]c1cc([CH2+])ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)C(=C[CH2+])C[N-]c1cc([CH2+])ccc1Cl",
+          "feature_hash": "85a363c6b7bdd2c79e2fdd68bfb4d647bb85c7e6d5ba00165baa5759a00ab913",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C(=C[CH2+])C[N-]c1cc([CH2+])ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)C(=C[CH2+])[CH+][N-]c1cc(C)ccc1Cl",
+          "feature_hash": "74abf0763141d604b5b91167f33f4d7f5d692fd7797249a44f11f1ad567dcfcd",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C(=C[CH2+])[CH+][N-]c1cc(C)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)C(=[C+]C)C[N-]c1cc([CH2+])ccc1Cl",
+          "feature_hash": "82565b657152527fc339fceac6df76a3ad95130304e9897e2d4d17856211e063",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C(=[C+]C)C[N-]c1cc([CH2+])ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.04703545803204179,
+      "prediction_seconds": 0.06858691689558327,
+      "prediction_peaks": 206,
+      "prediction_valid": true,
+      "prediction_sha256": "ad4df967499996203e579ca3218452f4c6d4529db5464988925fca5977ea2f94",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 5,
+      "candidate_index": 1,
+      "candidate_id": "candidate_310eddb6c00d450d7c9e1687c1775d7c85d0e05fd1b761e8d21503807531ede4",
+      "mz": 232.090042,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 5,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 3,
+            "j": 7,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 4,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 12,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 12,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 13,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 14,
+          "Cl": 1,
+          "H": 15,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 232.090042
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 2,
+        "chemical_valid_assignments": 2,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 72,
+        "search_nodes": 33,
+        "chemical_unique_states": 2,
+        "feature_unique_checked": 2,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {},
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 232.08875358,
+        "dp_cache": {
+          "hits": 74,
+          "misses": 72,
+          "maxsize": null,
+          "currsize": 72
+        },
+        "retained_states": 2,
+        "elapsed_seconds": 0.004599
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "Cc1ccccc1C[NH2+]c1ccccc1Cl",
+          "feature_hash": "88d258daa6c3d50357bd9de5039577ec785e4f4c974672cc330a44a4edf23c37",
+          "chemistry_rank": [
+            1,
+            0,
+            "Cc1ccccc1C[NH2+]c1ccccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "Cc1ccccc1CNc1ccccc1[ClH+]",
+          "feature_hash": "4ff6d2e766a8b21aa459553ab328608bbb3d8e43a1dbe237dbd5dec66840bf0c",
+          "chemistry_rank": [
+            1,
+            4,
+            "Cc1ccccc1CNc1ccccc1[ClH+]"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.005358624970540404,
+      "prediction_seconds": 0.03401200007647276,
+      "prediction_peaks": 137,
+      "prediction_valid": true,
+      "prediction_sha256": "2640a5c98c4993e52fae8feb83a873de4584d46165b110a64f71c3d614667616",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 5,
+      "candidate_index": 2,
+      "candidate_id": "candidate_5d11f13dc27b8bd6bcb49577507cc8da60b1379daa113082f1d7e5196359aa3b",
+      "mz": 232.090042,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 4,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 6,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 12,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 14,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 14,
+          "Cl": 1,
+          "H": 15,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 232.090042
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 405,
+        "chemical_valid_assignments": 189,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 328,
+        "search_nodes": 2407,
+        "chemical_unique_states": 189,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 3,
+        "families_exhausted": [
+          1
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 216
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 232.08875358,
+        "dp_cache": {
+          "hits": 7853,
+          "misses": 328,
+          "maxsize": null,
+          "currsize": 328
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.063835
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=CC=C(C[CH2+])C[N-]c1cc([CH2+])ccc1Cl",
+          "feature_hash": "5218a1cb3c5cad56b192b963e4b65e52e9815da7e5c19e27435a0ce2422c6d47",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=CC=C(C[CH2+])C[N-]c1cc([CH2+])ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=CC=C([CH+]C)C[N-]c1cc([CH2+])ccc1Cl",
+          "feature_hash": "6d4c8bf0be9a3b383d4851c05d1113040cc6db1d98692646f3f020ebc1b719b5",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=CC=C([CH+]C)C[N-]c1cc([CH2+])ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=CC=C([CH+]C)[CH+][N-]c1cc(C)ccc1Cl",
+          "feature_hash": "5e22de9f2a0122d33040b9298743ef6ff882a75be7329c9bf26a5b5f1899ee5f",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=CC=C([CH+]C)[CH+][N-]c1cc(C)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=CC=C([CH+][CH2+])C[N-]c1cc(C)ccc1Cl",
+          "feature_hash": "72b253e819868073b5bc8169e10c40402837106fb20a3ac19fe7ecc2d387650f",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=CC=C([CH+][CH2+])C[N-]c1cc(C)ccc1Cl"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.06501274998299778,
+      "prediction_seconds": 0.06606829108204693,
+      "prediction_peaks": 169,
+      "prediction_valid": true,
+      "prediction_sha256": "24c76f9b5a66fea1155cf63bb8e34a3c21fc6b940df141f6538a550e1a2917f1",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 5,
+      "candidate_index": 3,
+      "candidate_id": "candidate_c5f62997c7244c07dc800e0e1addd16f95490594980a6cd0e46dbf8ec9517b20",
+      "mz": 232.090042,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 12,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 4,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 11,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 13,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 14,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 14,
+          "Cl": 1,
+          "H": 15,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 232.090042
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 405,
+        "chemical_valid_assignments": 135,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 335,
+        "search_nodes": 2009,
+        "chemical_unique_states": 135,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 3,
+        "families_exhausted": [
+          1
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 270
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 232.08875358,
+        "dp_cache": {
+          "hits": 6967,
+          "misses": 335,
+          "maxsize": null,
+          "currsize": 335
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.056387
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "C=C(C)C=C(CCl)[N-][CH+]c1ccccc1[CH2+]",
+          "feature_hash": "6973cfb1480a68b63ed4e94cb2a3c96f5c420c7c6b9343f59bad9e79033071e9",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C=C(CCl)[N-][CH+]c1ccccc1[CH2+]"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)C=C([CH+]Cl)[N-]Cc1ccccc1[CH2+]",
+          "feature_hash": "230f396d0a1c933c828dd1dba69a5baa93c471f7eae5f1dbca0c2b7db8b1bdde",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C=C([CH+]Cl)[N-]Cc1ccccc1[CH2+]"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)C=C([CH+]Cl)[N-][CH+]c1ccccc1C",
+          "feature_hash": "188a6399bf397001b72572ec5ea4a690208f162cdaa6b077ddf1404f2d83e159",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)C=C([CH+]Cl)[N-][CH+]c1ccccc1C"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "C=C(C)[C+]=C(CCl)[N-]Cc1ccccc1[CH2+]",
+          "feature_hash": "2f3b2751a5b99b8f9774d3a22119bf235a80ce8cf97f66b31933d2fb480b6ca9",
+          "chemistry_rank": [
+            3,
+            8,
+            "C=C(C)[C+]=C(CCl)[N-]Cc1ccccc1[CH2+]"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.05759029102046043,
+      "prediction_seconds": 0.06871358293574303,
+      "prediction_peaks": 177,
+      "prediction_valid": true,
+      "prediction_sha256": "8dd476b4bba067de06a78808e9ddf2e95244060e4e42c8a4cc3b0714b7a5a1a8",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 5,
+      "candidate_index": 4,
+      "candidate_id": "candidate_ecc03b21294bbfb40dd766358dab7536ae2fd7a3b3bb8ed3a314a84f02579f6b",
+      "mz": 232.090042,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 5,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 6,
+            "j": 7,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 7,
+            "j": 13,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 8,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 11,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 14,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 14,
+          "Cl": 1,
+          "H": 15,
+          "N": 1
+        },
+        "charge": 1,
+        "precursor_mz": 232.090042
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 550,
+        "chemical_valid_assignments": 210,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 355,
+        "search_nodes": 2910,
+        "chemical_unique_states": 210,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 3,
+        "families_exhausted": [
+          1
+        ],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 340
+        },
+        "truncated": true,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 232.08875358,
+        "dp_cache": {
+          "hits": 10096,
+          "misses": 355,
+          "maxsize": null,
+          "currsize": 355
+        },
+        "feature_selection_capped": true,
+        "retained_states": 4,
+        "elapsed_seconds": 0.078683
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "CC=CC=C(Cl)[CH+][N-][CH+]c1ccccc1C",
+          "feature_hash": "c37149d165b71ac5f6c46eb5354aae5629e92aeab411cd85aeb7b02a46bb40c3",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=CC=C(Cl)[CH+][N-][CH+]c1ccccc1C"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC=C[C+]=C(Cl)C[N-][CH+]c1ccccc1C",
+          "feature_hash": "d99c84006ca47b3eb76729abc51945a6c8216b898cbe18fabe39b3a39aeb34f5",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=C[C+]=C(Cl)C[N-][CH+]c1ccccc1C"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC=C[C+]=C(Cl)[CH+][N-]Cc1ccccc1C",
+          "feature_hash": "4463d61ee361f2772a819bd981383e231beb69c3f606fa18db979cbeff7fcd85",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=C[C+]=C(Cl)[CH+][N-]Cc1ccccc1C"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "CC=[C+]C=C(Cl)C[N-][CH+]c1ccccc1C",
+          "feature_hash": "50209a137183c91aa2b1a2cf16052b25d0e975abff59bde1c0dabb09059fdac8",
+          "chemistry_rank": [
+            3,
+            8,
+            "CC=[C+]C=C(Cl)C[N-][CH+]c1ccccc1C"
+          ],
+          "total_abs_charge": 3,
+          "ionic_formula": {
+            "C": 14,
+            "Cl": 1,
+            "H": 15,
+            "N": 1
+          },
+          "charge": 1,
+          "formula_mz": 232.08875358,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.07986800000071526,
+      "prediction_seconds": 0.06554904102813452,
+      "prediction_peaks": 162,
+      "prediction_valid": true,
+      "prediction_sha256": "98ebe3ab395b45acaf8da7c8de40814eb37f8b34d26292d1e6836b9bfbfdddb3",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 6,
+      "candidate_index": 0,
+      "candidate_id": "candidate_db8084b70ce42930ab7527d80c3d42934b87ab45c1508c05bd890a780f9551ba",
+      "mz": 258.069335,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 4,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 16,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 16,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 13,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 17,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 12,
+            "j": 17,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 14,
+            "j": 16,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 15,
+            "j": 17,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 15,
+          "Cl": 1,
+          "H": 13,
+          "N": 1,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 258.069335
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 10,
+        "chemical_valid_assignments": 3,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 184,
+        "search_nodes": 91,
+        "chemical_unique_states": 3,
+        "feature_unique_checked": 3,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {
+          "heavy_graph_or_aromaticity_changed": 7
+        },
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 258.068018136,
+        "dp_cache": {
+          "hits": 298,
+          "misses": 184,
+          "maxsize": null,
+          "currsize": 184
+        },
+        "retained_states": 3,
+        "elapsed_seconds": 0.008728
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "Cc1ccccc1CNc1cc([C+]=O)ccc1Cl",
+          "feature_hash": "e55081655b76cd0d792309f2b0a4fa8a42a7e288a9d0896340ae0f344fe4e313",
+          "chemistry_rank": [
+            1,
+            3,
+            "Cc1ccccc1CNc1cc([C+]=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 13,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 258.068018136,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "Cc1ccccc1[CH+]Nc1cc(C=O)ccc1Cl",
+          "feature_hash": "e9b72e770237149257e1d2ca6f11b79c9e91bcd3092b672c244ec673b1756505",
+          "chemistry_rank": [
+            1,
+            3,
+            "Cc1ccccc1[CH+]Nc1cc(C=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 13,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 258.068018136,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "[CH2+]c1ccccc1CNc1cc(C=O)ccc1Cl",
+          "feature_hash": "0df35ec83dd2d28862bc62eec1723a2f8a85e6fb9ff17bbbd36ee2061a7d0ece",
+          "chemistry_rank": [
+            1,
+            3,
+            "[CH2+]c1ccccc1CNc1cc(C=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 13,
+            "N": 1,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 258.068018136,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.00986312492750585,
+      "prediction_seconds": 0.057204750017262995,
+      "prediction_peaks": 191,
+      "prediction_valid": true,
+      "prediction_sha256": "b7d3507e8ae29a8d9caa61333100103a11349374657422a9b37714322699b6fd",
+      "outcome": "predicted"
+    },
+    {
+      "bag_index": 7,
+      "candidate_index": 0,
+      "candidate_id": "candidate_40846a2b33d0ab3898fea7537f5d209e3955379c7beee7b68ee588d24354d4c9",
+      "mz": 275.095886,
+      "has_ms3": false,
+      "stripped": {
+        "atoms": [
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "O",
+            "aromatic": false
+          },
+          {
+            "element": "Cl",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "N",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": false
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          },
+          {
+            "element": "C",
+            "aromatic": true
+          }
+        ],
+        "bonds": [
+          {
+            "i": 0,
+            "j": 15,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 1,
+            "j": 13,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 2,
+            "j": 13,
+            "order": 2.0,
+            "aromatic": false
+          },
+          {
+            "i": 3,
+            "j": 16,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 12,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 4,
+            "j": 17,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 5,
+            "j": 6,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 5,
+            "j": 8,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 6,
+            "j": 10,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 9,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 7,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 8,
+            "j": 15,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 9,
+            "j": 16,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 10,
+            "j": 17,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 14,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 11,
+            "j": 18,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 12,
+            "j": 18,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 13,
+            "j": 14,
+            "order": 1.0,
+            "aromatic": false
+          },
+          {
+            "i": 15,
+            "j": 17,
+            "order": 1.5,
+            "aromatic": true
+          },
+          {
+            "i": 16,
+            "j": 18,
+            "order": 1.5,
+            "aromatic": true
+          }
+        ],
+        "ionic_formula": {
+          "C": 15,
+          "Cl": 1,
+          "H": 16,
+          "N": 2,
+          "O": 1
+        },
+        "charge": 1,
+        "precursor_mz": 275.095886
+      },
+      "metadata": {
+        "policy": "fixed-bonds-closed-shell-min-abs-charge-v1",
+        "charge_families": [
+          1,
+          3,
+          5,
+          7
+        ],
+        "local_charge_domain": [
+          -1,
+          0,
+          1
+        ],
+        "radical_domain": "closed_shell",
+        "max_leaves": 20000,
+        "max_chemical_states": 512,
+        "max_states": 4,
+        "leaves_checked": 4,
+        "chemical_valid_assignments": 4,
+        "max_graph_atoms": 100,
+        "max_dp_states": 250000,
+        "max_search_nodes": 250000,
+        "dp_states": 82,
+        "search_nodes": 70,
+        "chemical_unique_states": 4,
+        "feature_unique_checked": 4,
+        "minimum_abs_charge": 1,
+        "families_exhausted": [],
+        "rejections": {},
+        "truncated": false,
+        "stop_reason": "minimum_valid_family_exhausted",
+        "formula_mz": 275.094567232,
+        "dp_cache": {
+          "hits": 197,
+          "misses": 82,
+          "maxsize": null,
+          "currsize": 82
+        },
+        "retained_states": 4,
+        "elapsed_seconds": 0.012075
+      },
+      "status": "ok",
+      "reason": null,
+      "route": "baseline",
+      "baseline_reason": null,
+      "states": [
+        {
+          "ionic_smiles": "Cc1ccccc1CNc1cc(C([NH3+])=O)ccc1Cl",
+          "feature_hash": "8c7fc16d3470c39a9e2a95fdbd9f191376b57e9f041252be35e98a101d2523bd",
+          "chemistry_rank": [
+            1,
+            0,
+            "Cc1ccccc1CNc1cc(C([NH3+])=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 16,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 275.094567232,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "Cc1ccccc1C[NH2+]c1cc(C(N)=O)ccc1Cl",
+          "feature_hash": "42158b321d5830fbb9069d0c74530fc3897a281e5087be6cae8ba39bab0f5833",
+          "chemistry_rank": [
+            1,
+            0,
+            "Cc1ccccc1C[NH2+]c1cc(C(N)=O)ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 16,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 275.094567232,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "Cc1ccccc1CNc1cc(C(N)=[OH+])ccc1Cl",
+          "feature_hash": "c010a6652d57499dfefb293f7790d7cd58888e3083a8b11117531c371eb23c7f",
+          "chemistry_rank": [
+            1,
+            1,
+            "Cc1ccccc1CNc1cc(C(N)=[OH+])ccc1Cl"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 16,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 275.094567232,
+          "adduct": "[M]+"
+        },
+        {
+          "ionic_smiles": "Cc1ccccc1CNc1cc(C(N)=O)ccc1[ClH+]",
+          "feature_hash": "43edd3968480e43fc195bf1b524a6d676c2b79a662700f45208be5bd97513a2a",
+          "chemistry_rank": [
+            1,
+            4,
+            "Cc1ccccc1CNc1cc(C(N)=O)ccc1[ClH+]"
+          ],
+          "total_abs_charge": 1,
+          "ionic_formula": {
+            "C": 15,
+            "Cl": 1,
+            "H": 16,
+            "N": 2,
+            "O": 1
+          },
+          "charge": 1,
+          "formula_mz": 275.094567232,
+          "adduct": "[M]+"
+        }
+      ],
+      "prepare_seconds": 0.013543749926611781,
+      "prediction_seconds": 0.08105020900256932,
+      "prediction_peaks": 162,
+      "prediction_valid": true,
+      "prediction_sha256": "891d2deb89b390c975fa6a1db5a8d9e79192880f6fc5921fe09ca005ba0abfbe",
+      "outcome": "predicted"
+    }
+  ],
+  "generation_seconds": 0.2044470829423517,
+  "total_bags": 26,
+  "homogeneous_bags": 8,
+  "raw_candidates": 22,
+  "candidates": 20,
+  "linked_ms3_bags": 2,
+  "linked_ms3_candidates": 5,
+  "preparation_seconds": 0.4760739158373326,
+  "prediction_seconds": 0.8384392476873472,
+  "model_state_calls": 54,
+  "elapsed_seconds": 1.5207977920072153,
+  "outcomes": {
+    "predicted": 18,
+    "unavailable": 2
+  },
+  "reasons": {
+    "no_valid_radical_state_in_declared_domain": 2
+  }
+}

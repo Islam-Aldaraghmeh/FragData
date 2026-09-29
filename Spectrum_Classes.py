@@ -1,6 +1,28 @@
-from dataclasses import dataclass
-import numpy as np
 from dataclasses import dataclass, field
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+class SpectrumCollection(list):
+    """A normal list with a constant-size preview for notebook inspectors."""
+    __slots__ = ()
+
+    def __repr__(self):
+        return f"SpectrumCollection({len(self)} spectra)"
+
+    def _repr_pretty_(self, printer, cycle):
+        printer.text(repr(self))
+
+
+class SpectraBySmiles(dict):
+    """A normal mapping whose preview does not render the entire library."""
+    __slots__ = ()
+
+    def __repr__(self):
+        return f"SpectraBySmiles({len(self)} SMILES groups)"
+
+    def _repr_pretty_(self, printer, cycle):
+        printer.text(repr(self))
 
 @dataclass(slots=True)
 class Spectrum:
@@ -9,6 +31,12 @@ class Spectrum:
     ms_level: int
     peaks: np.ndarray
     metadata: dict
+
+    def __repr__(self):
+        # Dataclass defaults render every peak and metadata entry. IDE variable
+        # previews can request this after every cell, including a plain print().
+        return (f"Spectrum(ms_level={self.ms_level}, "
+                f"precursor_mz={self.precursor_mz:.6f}, n_peaks={len(self.peaks)})")
 
     @classmethod
     def from_record(cls, record):
@@ -83,6 +111,10 @@ class SpectrumForest:
     parent_of: dict[str, str] = field(default_factory=dict)
     parent_peak_mz: dict[str, float] = field(default_factory=dict)
     orphans: list[str] = field(default_factory=list)
+
+    def __repr__(self):
+        return (f"SpectrumForest(n_spectra={len(self.nodes)}, "
+                f"n_links={len(self.parent_of)}, n_orphans={len(self.orphans)})")
 
     @property
     def roots(self):

@@ -29,21 +29,23 @@ Keep this folder intact and put it on `PYTHONPATH` (or run from this folder).
 framework. It has no runtime imports from the old prototype. Each Python file
 has a neighboring Markdown explanation with its exact source and assumptions.
 
-For this workspace, reuse the already tested environment and external assets:
+This repository contains the working environment and model assets. From the
+repository root, run:
 
 ```sh
 cd distilled_fragdata
-export GLACIER_UPSTREAM="$(cd ../fragment_glacier_pretrained_adapter/vendor/ms-pred && pwd)"
-export GLACIER_CHECKPOINT="$(cd ../fragment_glacier_pretrained_adapter/checkpoints && pwd)/best.ckpt"
 export PYTHONPATH="$PWD"
-../fragment_glacier_pretrained_adapter/.venv/bin/python -m pytest tests -q
+../.venv/bin/python -m pytest tests -q
 ```
 
-After copying, use your own Python environment and set those two variables to
-the pinned upstream checkout and public checkpoint. They are **external assets**,
-not copied into this folder. The wrapper checks the commit, clean tracked source
-and checkpoint SHA256 before use. See [requirements.md](requirements.md) for
-versions, asset acquisition and Apple Silicon notes.
+`GlacierAPI()` resolves `vendor/ms-pred/` and `checkpoints/best.ckpt` inside the
+repository root by default, independently of the working directory. Explicit
+paths and `GLACIER_UPSTREAM` / `GLACIER_CHECKPOINT` remain optional overrides.
+The wrapper checks the commit, clean tracked source and checkpoint SHA256 before
+use. The environment and large assets are local but Git-ignored; a fresh Git
+clone needs them restored. See [requirements.md](requirements.md) for versions,
+asset acquisition and Apple Silicon notes, and the [root README](../README.md)
+for notebook setup. No sibling prototype checkout is required.
 
 ## Minimal fragment prediction
 
@@ -53,7 +55,7 @@ from src.chemistry.formula import ionic_mass
 from src.chemistry.fragment_adapter import FragmentGlacierAdapter, stripped_from_smiles
 from src.data.candidate_bags import FragmentCandidate
 
-glacier = GlacierAPI()  # explicit paths or GLACIER_UPSTREAM / GLACIER_CHECKPOINT
+glacier = GlacierAPI()  # Uses the repository-local pinned source and checkpoint.
 stripped = stripped_from_smiles("NCCO", "C2H8NO", 1, ionic_mass("C2H8NO"))
 candidate = FragmentCandidate(
     "example", {k: stripped[k] for k in ("atoms", "bonds")},
@@ -121,7 +123,7 @@ The 17 focused tests cover actual old/new pretrained inference, every input
 tensor, retained states at equal caps, invariants, frozen peaks, cosine/entropy,
 conservative linkage, fragment-m/z CE conversion and cache identities. Frozen
 reference outputs travel with the code. When old source is present, the same
-tests also compare it live. Without external model assets, model-dependent tests
+tests also compare it live when explicitly configured. Without local model assets, model-dependent tests
 explicitly skip; that is not a full equivalence verification.
 
 See [DISTILLATION_REPORT.md](DISTILLATION_REPORT.md) for the source-to-module map,

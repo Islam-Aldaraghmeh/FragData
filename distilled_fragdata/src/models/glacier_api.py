@@ -7,7 +7,8 @@ import subprocess
 import sys
 from types import SimpleNamespace
 
-COMMIT = "67ba0f202305d4bed3134991dd4562fe1edb1763"
+from .assets import COMMIT, asset_path
+
 CHECKPOINT_SHA256 = "5a47cecca707d3abd5a49c7dbac99d100aa2a586d5d4f848f1e8e35140d7db11"
 # Exact checkpoint featurizer configuration; no weights are loaded here.
 FEATURE_CONFIG = SimpleNamespace(pe_embed_k=14, embed_elem_group=True,
@@ -57,21 +58,41 @@ def _feature_hash(mol, adduct):
 class GlacierAPI:
     """Verify external assets, then lazily load frozen GLACIER on CPU.
 
+    Defaults are repository-local vendor/ms-pred and checkpoints/best.ckpt.
     Paths may also come from GLACIER_UPSTREAM and GLACIER_CHECKPOINT.
     Outputs are unmodified upstream ``spec`` rows and ``frag`` masks. A row is
     not a postprocessed peak: coincident masses still need MAX pooling.
+    Keyword-only aromatic_fix/radical_fix configure FragmentGlacierAdapter;
+    they never change the weights or ordinary molecule/record prediction APIs.
     """
 
-    def __init__(self, upstream_path=None, checkpoint_path=None):
-        upstream_path = upstream_path or os.environ.get("GLACIER_UPSTREAM")
-        checkpoint_path = checkpoint_path or os.environ.get("GLACIER_CHECKPOINT")
-        if upstream_path is None or checkpoint_path is None:
-            raise ValueError("Provide upstream_path and checkpoint_path (or GLACIER_UPSTREAM / GLACIER_CHECKPOINT)")
-        self.upstream_path = Path(upstream_path).expanduser().resolve()
-        self.checkpoint_path = Path(checkpoint_path).expanduser().resolve()
+    def __init__(self, upstream_path=None, checkpoint_path=None, *,
+                 aromatic_fix=False, radical_fix=False):
+        for name, value in (("aromatic_fix", aromatic_fix), ("radical_fix", radical_fix)):
+            if not isinstance(value, bool):
+                raise TypeError(f"{name} must be a bool")
+        self._aromatic_fix = aromatic_fix
+        self._radical_fix = radical_fix
+        self.upstream_path = asset_path(upstream_path, "GLACIER_UPSTREAM", "vendor/ms-pred")
+        self.checkpoint_path = asset_path(checkpoint_path, "GLACIER_CHECKPOINT", "checkpoints/best.ckpt")
         self._model = None
         self._verify_assets()
         self._select_upstream()
+
+    @property
+    def aromatic_fix(self):
+        """Enable aromatic recovery only after baseline state preparation fails."""
+        return self._aromatic_fix
+
+    @property
+    def radical_fix(self):
+        """Enable direct one-radical cations only after baseline parity rejection."""
+        return self._radical_fix
+
+    @property
+    def recovery_settings(self):
+        """Independent per-model ablation settings; include in run/cache metadata."""
+        return {"aromatic_fix": self.aromatic_fix, "radical_fix": self.radical_fix}
 
     def _verify_assets(self):
         command = ["git", "-C", str(self.upstream_path)]

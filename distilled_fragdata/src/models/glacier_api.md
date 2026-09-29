@@ -9,14 +9,17 @@ prebuilt tensor, and padded batch prediction routes. It returns upstream raw
 ```python
 from src.models.glacier_api import GlacierAPI, records_from_smiles
 
-glacier = GlacierAPI("/path/to/ms-pred", "/path/to/best.ckpt")
+glacier = GlacierAPI()  # Repository-local vendor/ms-pred and checkpoints/best.ckpt.
 normal = glacier.predict_molecule("CCN", 25.0, "[M+H]+", "Orbitrap")
 records = records_from_smiles("CCN")
 direct = glacier.predict_records(records, 25.0, "[M+H]+", "Orbitrap")
 batch = glacier.predict_batch([records], [25.0], ["[M+H]+"], ["Orbitrap"])
 ```
 
-Paths can alternatively come from `GLACIER_UPSTREAM` and `GLACIER_CHECKPOINT`.
+The default paths are resolved from the repository location, not the current
+working directory. Paths can be overridden explicitly in the constructor or
+through `GLACIER_UPSTREAM` and `GLACIER_CHECKPOINT`. No sibling prototype
+checkout is required.
 The constructor verifies the git commit, absence of tracked modifications, and
 checkpoint hash, and selects the checkout's `src` directory. It does not import
 torch or load weights. Accessing `.model` or predicting loads weights once on CPU.
@@ -54,7 +57,8 @@ SHA-256 is `5a47cecca707d3abd5a49c7dbac99d100aa2a586d5d4f848f1e8e35140d7db11`.
 The seed `20260919`, four torch threads, CPU loading, `.eval()`, `.freeze()`,
 and `weights_only=False` match the prototype. No scientific behavior changed.
 
-Operational changes: external paths replace hard-coded prototype paths; asset
+Operational changes: local defaults and optional explicit/environment paths
+replace hard-coded prototype paths; asset
 checks occur at construction and raise descriptive exceptions instead of
 assertions; model dependencies/weights load lazily; an already imported foreign
 `ms_pred` checkout is rejected; the prototype's global bytecode-writing switch

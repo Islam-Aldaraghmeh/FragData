@@ -1,0 +1,25 @@
+{
+  "snapshot_created_utc": "2026-09-21T19:49:41.049374+00:00",
+  "source_notebook_sha256": "4e80fa2190b43b3b0b214882b52113b55f148d3758d25c2cd83790929a1c324a",
+  "cell_ids": [
+    "candidate-setup",
+    "ms3-linkage",
+    "magma-graph",
+    "formula-filter",
+    "glacier-prediction"
+  ],
+  "production_files_sha256": {
+    "distilled_fragdata/src/spectra/metrics.py": "e507d02d75cc579668eb1405bdcc3a3d9d64d04ebcbb50b15337565186752064",
+    "distilled_fragdata/src/spectra/spectrum.py": "6cf4e1a239ab430490aa20ea15fee7749ca98895f2ca27731dd19b5730612acf",
+    "distilled_fragdata/src/chemistry/_enumeration.py": "37c64c3646ad9a3c35ac3a5f6d66def396789d9324df4368006135db9fc7539a",
+    "distilled_fragdata/src/chemistry/formula.py": "b6ba3b0c1cd7f57989c606479438bab93e3d363caddad0a1bf9f243c54971965",
+    "distilled_fragdata/src/chemistry/_state_graph.py": "b70180cee46ef7a727e3ad31798bc2a63c18f850be433a7a1899a04aa54b596f",
+    "distilled_fragdata/src/chemistry/fragment_adapter.py": "78c9e60793f92f1cf621dd9f9f2867538eafa4f988237e7a1eb92806491ab018",
+    "distilled_fragdata/src/experiments/ms3_candidate_support.py": "949af040b707d95571c333829e952815712f8f708591c5cbd8c5f78ba7cd7e5b",
+    "distilled_fragdata/src/utils/prediction_cache.py": "a96b0a006583cf7b801c4c5a50dd4c9191cdaed084ae8303021cf68f08496984",
+    "distilled_fragdata/src/models/glacier_api.py": "beb0f08bac0d607a06b69051d02f3143ee2d6f2ceae7487affa90821a10933e4",
+    "distilled_fragdata/src/models/_direct_input.py": "5a87dee03cb7a63ff41ba82df7e5dad55026b11f78ea030fa8e587d97da65797",
+    "distilled_fragdata/src/data/msnlib.py": "df588f68c12b2ef7a01e49d071869f070ba99b7d6d4d7b128b8782cb86ec918f",
+    "distilled_fragdata/src/data/candidate_bags.py": "08de79de0a1dab0934c024b4851da1b8004db8d3dc58559a0368e39802f12690"
+  }
+}

@@ -1,0 +1,861 @@
+{
+  "method": "Exact sums of existing local domains, unrestricted total absolute charge.",
+  "limitation": "No sanitization or prediction is performed. A reachable assignment is not proof of a valid, plausible or accurately predicted molecule.",
+  "examples": [
+    {
+      "source_file": "spectrum_00.json",
+      "spectrum_index": 0,
+      "spectrum_status": "complete",
+      "scan": 406,
+      "candidate_id": "candidate_b25eb4b57f5bb4423fce041816608835d49a0cd4fe47cb9f5fb2a381ef27a24a",
+      "bag_index": 16,
+      "candidate_index": 4,
+      "mz": 167.066848,
+      "has_ms3": false,
+      "formula": {
+        "C": 10,
+        "F": 2,
+        "H": 9
+      },
+      "charge": 1,
+      "required_radicals": 0,
+      "atoms": [
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "F",
+          "aromatic": false
+        },
+        {
+          "element": "F",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        }
+      ],
+      "bonds": [
+        {
+          "i": 0,
+          "j": 5,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 1,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 2,
+          "j": 4,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 3,
+          "j": 7,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 9,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 5,
+          "j": 10,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 6,
+          "j": 10,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 7,
+          "j": 11,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 8,
+          "j": 10,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 8,
+          "j": 11,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 9,
+          "j": 11,
+          "order": 2.0,
+          "aromatic": false
+        }
+      ],
+      "reason": "no_valid_state_in_declared_domain",
+      "baseline_reason": "no_valid_state_in_declared_domain",
+      "route": "baseline",
+      "leaves_checked": 0,
+      "stop_reason": "all_declared_families_exhausted",
+      "truncated": false,
+      "rejections": {},
+      "declared_charge_families": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "declared_max_abs_charge": 7,
+      "required_abs_charge_families": [
+        9
+      ],
+      "minimum_required_abs_charge": 9,
+      "minimum_h_any_net_charge": 9,
+      "minimum_h_required_net_charge": 9,
+      "proof": "Formula/charge/radical sums require total absolute charge in [9]; declared families are [1, 3, 5, 7]."
+    },
+    {
+      "source_file": "spectrum_01.json",
+      "spectrum_index": 1,
+      "spectrum_status": "complete",
+      "scan": 191,
+      "candidate_id": "candidate_61930afa67d97518259a605f5392426caff5c9d9e1b56eabf5d1aa6be2a593ab",
+      "bag_index": 9,
+      "candidate_index": 1,
+      "mz": 96.019256,
+      "has_ms3": false,
+      "formula": {
+        "C": 3,
+        "H": 2,
+        "N": 3,
+        "O": 1
+      },
+      "charge": 1,
+      "required_radicals": 0,
+      "atoms": [
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "O",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        }
+      ],
+      "bonds": [
+        {
+          "i": 0,
+          "j": 4,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 1,
+          "j": 5,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 2,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 3,
+          "j": 5,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 6,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 5,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        }
+      ],
+      "reason": "no_valid_state_in_declared_domain",
+      "baseline_reason": "no_valid_state_in_declared_domain",
+      "route": "baseline",
+      "leaves_checked": 0,
+      "stop_reason": "all_declared_families_exhausted",
+      "truncated": false,
+      "rejections": {},
+      "declared_charge_families": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "declared_max_abs_charge": 7,
+      "required_abs_charge_families": [],
+      "minimum_required_abs_charge": null,
+      "minimum_h_any_net_charge": 3,
+      "minimum_h_required_net_charge": 6,
+      "proof": "Required net charge/radical count needs at least 6 H; formula has 2 H, even without an absolute-charge cap."
+    },
+    {
+      "source_file": "spectrum_02.json",
+      "spectrum_index": 2,
+      "spectrum_status": "complete",
+      "scan": 345,
+      "candidate_id": "candidate_13fc33dcbcc6e04ff0419848f25981a139b280d9718199dbbe45fbe41f63ca18",
+      "bag_index": 4,
+      "candidate_index": 0,
+      "mz": 213.000823,
+      "has_ms3": false,
+      "formula": {
+        "C": 12,
+        "Cl": 1,
+        "H": 4,
+        "N": 1,
+        "O": 1
+      },
+      "charge": 1,
+      "required_radicals": 1,
+      "atoms": [
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "O",
+          "aromatic": false
+        },
+        {
+          "element": "Cl",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        }
+      ],
+      "bonds": [
+        {
+          "i": 0,
+          "j": 7,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 1,
+          "j": 13,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 2,
+          "j": 6,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 3,
+          "j": 5,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 8,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 12,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 5,
+          "j": 14,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 6,
+          "j": 13,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 7,
+          "j": 9,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 8,
+          "j": 10,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 9,
+          "j": 10,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 11,
+          "j": 13,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 11,
+          "j": 14,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 12,
+          "j": 14,
+          "order": 1.0,
+          "aromatic": false
+        }
+      ],
+      "reason": "no_valid_radical_state_in_declared_domain",
+      "baseline_reason": "odd_electron_formula_outside_closed_shell_domain",
+      "route": "direct_radical_cation",
+      "leaves_checked": 0,
+      "stop_reason": "no_valid_radical_state_in_declared_domain",
+      "truncated": false,
+      "rejections": {},
+      "declared_charge_families": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "declared_max_abs_charge": 7,
+      "required_abs_charge_families": [
+        11
+      ],
+      "minimum_required_abs_charge": 11,
+      "minimum_h_any_net_charge": 4,
+      "minimum_h_required_net_charge": 4,
+      "proof": "Formula/charge/radical sums require total absolute charge in [11]; declared families are [1, 3, 5, 7]."
+    },
+    {
+      "source_file": "spectrum_06.json",
+      "spectrum_index": 6,
+      "spectrum_status": "complete",
+      "scan": 207,
+      "candidate_id": "candidate_19df15c134e31821bb7aca73f1f9e253e3db284e89585836eaa3aef0e5ff70ca",
+      "bag_index": 0,
+      "candidate_index": 0,
+      "mz": 91.055503,
+      "has_ms3": true,
+      "formula": {
+        "C": 7,
+        "H": 7
+      },
+      "charge": 1,
+      "required_radicals": 0,
+      "atoms": [
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        }
+      ],
+      "bonds": [
+        {
+          "i": 0,
+          "j": 5,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 1,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 2,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 3,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 5,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 5,
+          "j": 6,
+          "order": 1.0,
+          "aromatic": false
+        }
+      ],
+      "reason": "no_valid_state_in_declared_domain",
+      "baseline_reason": "no_valid_state_in_declared_domain",
+      "route": "baseline",
+      "leaves_checked": 0,
+      "stop_reason": "all_declared_families_exhausted",
+      "truncated": false,
+      "rejections": {},
+      "declared_charge_families": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "declared_max_abs_charge": 7,
+      "required_abs_charge_families": [],
+      "minimum_required_abs_charge": null,
+      "minimum_h_any_net_charge": 9,
+      "minimum_h_required_net_charge": 9,
+      "proof": "Required net charge/radical count needs at least 9 H; formula has 7 H, even without an absolute-charge cap."
+    },
+    {
+      "source_file": "spectrum_20.json",
+      "spectrum_index": 20,
+      "spectrum_status": "timeout",
+      "scan": 226,
+      "candidate_id": "candidate_124fe8de21c94d21ecd6ea057a46eec8e36315e6ca37661fe81a05173e4043f3",
+      "bag_index": 8,
+      "candidate_index": 1,
+      "mz": 319.105041,
+      "has_ms3": false,
+      "formula": {
+        "C": 17,
+        "H": 13,
+        "N": 5,
+        "O": 2
+      },
+      "charge": 1,
+      "required_radicals": 1,
+      "atoms": [
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "O",
+          "aromatic": false
+        },
+        {
+          "element": "O",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": false
+        },
+        {
+          "element": "C",
+          "aromatic": true
+        },
+        {
+          "element": "C",
+          "aromatic": true
+        },
+        {
+          "element": "C",
+          "aromatic": true
+        },
+        {
+          "element": "N",
+          "aromatic": false
+        },
+        {
+          "element": "N",
+          "aromatic": true
+        },
+        {
+          "element": "N",
+          "aromatic": true
+        }
+      ],
+      "bonds": [
+        {
+          "i": 0,
+          "j": 11,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 1,
+          "j": 14,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 2,
+          "j": 10,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 3,
+          "j": 13,
+          "order": 3.0,
+          "aromatic": false
+        },
+        {
+          "i": 4,
+          "j": 12,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 5,
+          "j": 16,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 6,
+          "j": 20,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 7,
+          "j": 8,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 7,
+          "j": 15,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 8,
+          "j": 21,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 9,
+          "j": 15,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 9,
+          "j": 21,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 10,
+          "j": 17,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 11,
+          "j": 17,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 12,
+          "j": 19,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 13,
+          "j": 16,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 14,
+          "j": 18,
+          "order": 2.0,
+          "aromatic": false
+        },
+        {
+          "i": 15,
+          "j": 22,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 16,
+          "j": 21,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 17,
+          "j": 23,
+          "order": 1.0,
+          "aromatic": false
+        },
+        {
+          "i": 18,
+          "j": 19,
+          "order": 1.5,
+          "aromatic": true
+        },
+        {
+          "i": 18,
+          "j": 22,
+          "order": 1.5,
+          "aromatic": true
+        },
+        {
+          "i": 19,
+          "j": 23,
+          "order": 1.5,
+          "aromatic": true
+        },
+        {
+          "i": 20,
+          "j": 22,
+          "order": 1.5,
+          "aromatic": true
+        },
+        {
+          "i": 20,
+          "j": 23,
+          "order": 1.5,
+          "aromatic": true
+        }
+      ],
+      "reason": "search_incomplete",
+      "baseline_reason": "odd_electron_formula_outside_closed_shell_domain",
+      "route": "direct_radical_cation",
+      "leaves_checked": 20000,
+      "stop_reason": "leaf_budget",
+      "truncated": true,
+      "rejections": {
+        "heavy_graph_or_aromaticity_changed": 20000
+      },
+      "declared_charge_families": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "declared_max_abs_charge": 7,
+      "required_abs_charge_families": [
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21
+      ],
+      "minimum_required_abs_charge": 7,
+      "minimum_h_any_net_charge": 8,
+      "minimum_h_required_net_charge": 8,
+      "proof": "Local sums are feasible in a declared family; inspect sanitization rejections or search budgets for the recorded failure."
+    }
+  ]
+}

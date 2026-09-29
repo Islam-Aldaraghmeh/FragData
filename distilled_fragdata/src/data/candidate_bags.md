@@ -6,9 +6,14 @@ uses only the standard library. It does not invoke MAGMa or generate candidates.
 ## API and inputs/outputs
 
 - `FragmentCandidate(candidate_id, graph, ionic_formula, charge, precursor_mz,
-  metadata={})` stores one hypothesis. `graph` contains `atoms` and `bonds`;
+  metadata={}, ms3_spectra=[])` stores one hypothesis. `graph` contains `atoms` and `bonds`;
   formula may be a string or element-count dictionary. `.stripped` returns an
   independent copy of exactly the five inputs accepted by the fragment adapter.
+  `ms3_spectra` holds optional runtime references to the measured MS3 children
+  attached to the candidate's MS2 peak in `Experiment_1.ipynb`. All candidates
+  in that bag share the observations; this is not a confirmed structure
+  assignment. The field is excluded from `.stripped`, representation and
+  equality, and starts empty when loading existing candidate files.
 - `CandidateBag(bag_id, candidates, linked_isolation_id=None, isolated_mz=None,
   metadata={})` stores candidates in their original order. The optional linked
   isolation ID lets a caller reject comparison with an unrelated MS3 spectrum.

@@ -13,6 +13,9 @@ class FragmentCandidate:
     charge: int
     precursor_mz: float
     metadata: dict = field(default_factory=dict)
+    # Runtime observations shared by candidates in one MS2 peak bag. These are
+    # reference spectra, not additional model inputs or confirmed assignments.
+    ms3_spectra: list = field(default_factory=list, repr=False, compare=False)
 
     @property
     def stripped(self):
