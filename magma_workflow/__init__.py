@@ -1,13 +1,6 @@
-"""Shared notebook utilities; model code is imported only on request.
+"""MSnLib loading, MAGMa candidate generation and the cached intensity dataset.
 
-Use magma_workflow.dataset, .candidates, .plotting, or .glacier explicitly.
-The package itself does not import Torch, Glacier, or ionic-state enumeration.
+Modules: dataset (MSnLib spectra + MSn forest), magma (vendored MAGMa engine),
+chemistry (formulas, masses, canonical graphs), candidates (MAGMa candidate
+bags + MS3 linkage), intensity_dataset (cached training examples), plotting.
 """
-from pathlib import Path
-import sys
-
-REPO_ROOT = Path(__file__).resolve().parents[1]
-# The existing distilled package uses the namespace `src` internally.
-_distilled = str(REPO_ROOT / "distilled_fragdata")
-if _distilled not in sys.path:
-    sys.path.insert(0, _distilled)

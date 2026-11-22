@@ -1,0 +1,29 @@
+{
+  "q2": {
+    "ceiling": 0.9754145431969352,
+    "peaks": {
+      "1 candidate": 0.20312142749033107,
+      "several candidates,\nsame formula (isomers)": 0.7106504664590653,
+      "several formulas": 0.08622810605060365
+    },
+    "intensity": {
+      "1 candidate": 0.2932056181966491,
+      "several candidates,\nsame formula (isomers)": 0.6240408042670414,
+      "several formulas": 0.08275357753630935
+    }
+  },
+  "q3": {
+    "molecule": "Z2269731662",
+    "peak_mz": 181.097351,
+    "n_candidates_in_bag": 6,
+    "A": "CCC(N1CCOCC1)CNC=O",
+    "B": "COCCNC1CN(C=O)CC1C",
+    "explained_A": 0.5143604269397142,
+    "explained_B": 0.7300932153643368
+  },
+  "q4": {
+    "cos_sum": 0.780938643183851,
+    "cos_max": 0.7799166675029864,
+    "agree_top_candidate": 0.6768371030572495
+  }
+}

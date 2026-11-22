@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT))
 
 from magma_workflow import candidates
 from magma_workflow.dataset import Spectrum
-from src.chemistry.formula import ionic_mass
+from magma_workflow.chemistry import ionic_mass
 
 
 def fragment(name="candidate", *, branch=False, formula="C4H5"):
@@ -148,9 +148,6 @@ def test_invalid_peak_locations_raise(mz):
 
 
 def test_generator_default_all_matching_is_unchanged_and_nearest_is_opt_in():
-    if not (ROOT / "vendor/ms-pred").is_dir():
-        pytest.skip("Pinned MAGMa checkout is not installed")
-
     class IntensityBlindSpectrum(Spectrum):
         @property
         def intensity(self):

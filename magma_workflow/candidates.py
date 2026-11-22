@@ -1,35 +1,27 @@
-"""MAGMa candidate bags and measured MS3 linkage; no Glacier or microstates."""
+"""MAGMa candidate bags and measured MS3 linkage."""
 import hashlib
 import json
-import os
-from pathlib import Path
-import subprocess
-import sys
 from collections import Counter
 from copy import copy, deepcopy
+from dataclasses import dataclass, field
 
 import numpy as np
 
+from .chemistry import _canonical_graph, exact_mass, formula_counts, ionic_mass
 from .dataset import parse_spectrum_forest
-from src.data.candidate_bags import FragmentCandidate
-from src.chemistry.formula import formula_counts, ionic_mass, exact_mass
-from src.models.assets import COMMIT, asset_path as _asset_path
 
 
-def _select_magma_upstream(upstream_path=None):
-    """Select the pinned MAGMa source checkout, without loading model code."""
-    upstream = _asset_path(upstream_path, "GLACIER_UPSTREAM", "vendor/ms-pred")
-    command = ["git", "-C", str(upstream)]
-    actual = subprocess.check_output(command + ["rev-parse", "HEAD"], text=True).strip()
-    if actual != COMMIT or subprocess.check_output(command + ["diff", "HEAD"], text=True):
-        raise ValueError(f"MAGMa requires the clean ms-pred checkout at {COMMIT}")
-    source = upstream / "src"
-    imported = sys.modules.get("ms_pred")
-    if imported is not None and not Path(imported.__file__).resolve().is_relative_to(source):
-        raise RuntimeError("Another ms_pred checkout is imported; restart the kernel.")
-    os.environ.setdefault("DGLBACKEND", "pytorch")
-    if str(source) not in sys.path:
-        sys.path.insert(0, str(source))
+@dataclass
+class FragmentCandidate:
+    candidate_id: str
+    graph: dict
+    ionic_formula: str | dict
+    charge: int
+    precursor_mz: float
+    metadata: dict = field(default_factory=dict)
+    # Runtime observations shared by candidates in one MS2 peak bag. These are
+    # reference spectra, not additional model inputs or confirmed assignments.
+    ms3_spectra: list = field(default_factory=list, repr=False, compare=False)
 
 
 def _candidate_digest(value):
@@ -62,8 +54,8 @@ def _unpack_bag(bag):
 def find_ms3_children(spectrum, spectra=None, *, forest=None, mz_tolerance=0.01):
     """Return {original_MS2_peak_index: [direct_MS3_Spectrum, ...]}.
 
-    Reuse parse_spectrum_forest/children and the nearest-parent-peak convention
-    from Explore_dataset.ipynb. Scope the forest to the selected feature and
+    Reuse parse_spectrum_forest/children and the nearest-parent-peak convention.
+    Scope the forest to the selected feature and
     keep separate scans even when their collision energies are the same.
     Child.precursor_mz may describe the root molecule: the isolated fragment m/z
     comes from forest.parent_peak_mz (the final msn_precursor_mzs entry).
@@ -130,7 +122,7 @@ def attach_ms3_spectra(spectrum, candidate_bags, spectra=None, *, forest=None,
 
     Each candidate references the same measured observations as its bag. These
     spectra support the peak, not a particular structural hypothesis. They are
-    never passed to Glacier or used to select candidates.
+    never used to select candidates.
     Accept full, filtered, or reordered bags; generated peak_index metadata
     preserves the original MS2 peak identity after filtering or sorting.
     """
@@ -165,48 +157,9 @@ def attach_ms3_spectra(spectrum, candidate_bags, spectra=None, *, forest=None,
     return result
 
 
-def random_ms2_with_ms3(spectra=None, *, seed=None, mz_tolerance=0.01):
-    """Return a random MS2 Spectrum with at least one linked MS3 child.
-
-    Pass all related scans (including MS3), or omit spectra to use set_spectrum_source context.
-    Uses SINGLE_BEST_SCAN records and the same linkage as find_ms3_children.
-    Selection is uniform over eligible MS2 records; seed makes it repeatable.
-    Raises ValueError when no eligible MS2 exists.
-    """
-    import random
-
-    if not np.isfinite(mz_tolerance) or mz_tolerance < 0:
-        raise ValueError("mz_tolerance must be finite and nonnegative")
-    if spectra is None:
-        spectra = _source_spectra
-    if spectra is None:
-        raise ValueError("Call set_spectrum_source or pass spectra including MS2 and MS3 scans")
-
-    by_feature = {}
-    candidates = []
-    for scan in spectra:
-        if scan.ms_level not in (2, 3) or scan.metadata.get("merge_type") != "SINGLE_BEST_SCAN":
-            continue
-        key = (scan.smiles, scan.metadata.get("feature_id"))
-        by_feature.setdefault(key, []).append(scan)
-        if scan.ms_level == 2:
-            candidates.append(scan)
-
-    random.Random(seed).shuffle(candidates)
-    forests = {}
-    for candidate in candidates:
-        key = (candidate.smiles, candidate.metadata.get("feature_id"))
-        if key not in forests:
-            forests[key] = parse_spectrum_forest(by_feature[key], mz_tol=mz_tolerance)
-        if find_ms3_children(candidate, forest=forests[key], mz_tolerance=mz_tolerance):
-            return candidate
-    raise ValueError("No MS2 spectrum with linked MS3 children was found")
-
-
 def _magma_fragment_graph(engine, fragment_mask):
     """Induce the heavy graph; restore aromaticity only on intact parent rings."""
     from rdkit import Chem
-    from src.chemistry.heavy_graph import _canonical_graph
 
     parent = Chem.MolFromSmiles(engine.smiles)
     if parent is None or parent.GetNumAtoms() != engine.mol.GetNumAtoms():
@@ -256,8 +209,6 @@ def assign_candidates_to_nearest_peak(candidate_bags):
     on the union of several scans. Existing tolerance matching defines the
     eligible bags; this helper never introduces an additional match.
     """
-    from src.chemistry.heavy_graph import _canonical_graph
-
     bags = [_unpack_bag(bag) for bag in candidate_bags]
     identities, winners = {}, {}
     for index, (mz, fragments, _) in enumerate(bags):
@@ -298,10 +249,10 @@ def assign_candidates_to_nearest_peak(candidate_bags):
 
 
 def get_candidate_bags(spectrum, spectra=None, *, forest=None,
-                       upstream_path=None, mz_tolerance=0.005,
+                       mz_tolerance=0.005,
                        ppm_tolerance=20.0, max_tree_depth=3, max_broken_bonds=6,
                        max_boundary_cuts=6, ms3_mz_tolerance=0.01,
-                       peak_assignment="all"):
+                       peak_assignment="all", include_ms3=True):
     """Run MAGMa and return [(peak_mz, [FragmentCandidate], [MS3 Spectrum])].
 
     Related scans come from spectra/forest, or set_spectrum_source context by default.
@@ -311,8 +262,7 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
     deduplicate only equal heavy graph + full ionic formula + charge, retaining
     all origins. Candidate precursor_mz is the observed fragment m/z.
     Intensities do not select or rank candidates. No model weights are needed.
-    Wider matching tolerances are allowed for exploration, but the Glacier
-    adapter still requires formula/mass agreement within max(0.005 Da, 20 ppm).
+    Wider matching tolerances are allowed for exploration.
     peak_assignment="nearest" assigns each identity to only its closest
     eligible centroid; "all" preserves the original multi-match behavior.
     """
@@ -337,10 +287,8 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
             or not np.isfinite(parent_mz) or parent_mz <= 0):
         raise ValueError("Spectrum m/z values must be finite and positive")
 
-    _select_magma_upstream(upstream_path)
     from rdkit import Chem
-    from ms_pred import common
-    from ms_pred.magma.fragmentation import FragmentEngine
+    from .magma import FragmentEngine, ion2mass
 
     parent = Chem.MolFromSmiles(spectrum.smiles)
     if parent is None:
@@ -353,7 +301,7 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
     engine = FragmentEngine(spectrum.smiles, max_tree_depth=max_tree_depth,
                             max_broken_bonds=max_broken_bonds)
     tolerance = lambda mz: max(mz_tolerance, ppm_tolerance * mz * 1e-6)
-    if abs(engine.full_weight + common.ion2mass[adduct] - parent_mz) > tolerance(parent_mz):
+    if abs(engine.full_weight + ion2mass[adduct] - parent_mz) > tolerance(parent_mz):
         raise ValueError("The canonical precursor structure/adduct does not match precursor_mz")
     if not len(mzs):
         return []
@@ -421,24 +369,11 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
             for mz, candidates in zip(mzs, per_peak)]
     if peak_assignment == "nearest":
         bags = assign_candidates_to_nearest_peak(bags)
+        
+    if not include_ms3:
+        return [
+            (mz, fragments, [])
+            for mz, fragments, _ in map(_unpack_bag, bags)
+        ]
     return attach_ms3_spectra(spectrum, bags, spectra, forest=forest,
                                mz_tolerance=ms3_mz_tolerance)
-
-def filter_same_formula_bags(candidate_bags):
-    """Keep nonempty bags with exactly one ionic formula/charge combination.
-
-    Formula strings and element-count dictionaries are compared by composition.
-    Preserve bag order and fragment order, without merging bags or mutating input.
-    Singleton bags qualify; empty and mixed-formula bags do not.
-    The third field and candidate MS3 references are preserved.
-    """
-    result = []
-    for bag in candidate_bags:
-        mz, fragments, ms3_spectra = _unpack_bag(bag)
-        formulas = {
-            (tuple(formula_counts(fragment.ionic_formula).items()), fragment.charge)
-            for fragment in fragments
-        }
-        if len(formulas) == 1:
-            result.append((mz, list(fragments), ms3_spectra))
-    return result

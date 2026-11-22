@@ -1,0 +1,86 @@
+HOW TO CONTINUE  (state as of 2026-10-20, training stopped on request)
+=====================================================================
+
+WHERE WE ARE
+------------
+Goal: train and evaluate an intensity predictor for MAGMa candidate bags, in
+Experiment_1_agentic.ipynb (all code in the new package intensity_lab/).
+
+Done and saved:
+  * Data caches (data/agentic_cache/): raw example join, MAGMa engine SMILES,
+    features (1.8 GB .npz), splits, similarity arrays. Rebuild automatically if deleted.
+  * Notebook sections 1-4 (data, bug checks, evaluation protocol, features,
+    debugging checks) executed cleanly on a copy.
+  * 9 of 17 registry runs finished (results/experiment_1_agentic/runs/):
+        linear, mlp_large, mlp, gnn, mlp_shuffled_labels, gnn_agg_max,
+        gnn_misaligned, gnn_fragment_pool, gnn_original_inputs_misaligned
+    + the LightGBM baseline (lightgbm-*.txt).
+  * The TEST SET HAS NOT BEEN USED YET (all numbers so far are validation).
+
+Still to do, in order:
+  1. Train the 7 remaining ablations (about 35-40 min with 3 processes):
+        gnn_agg_mean, gnn_loss_cos, gnn_graph_only, gnn_original_inputs,
+        gnn_context, gnn_reg, gnn_deeper
+  2. Pick the final config with EXP.pick_final(...) over FINAL_CANDIDATES
+     (gnn, gnn_reg, gnn_deeper, gnn_context; simplest within 0.002 of the best).
+     The notebook does this automatically.
+  3. Train the "final" group for that name: 2 extra seeds, scaffold-split run,
+     data-scaling runs at 10/25/50% (about 30 min).
+  4. Execute the whole notebook top to bottom (everything cached -> ~10 min).
+  5. Replace the two placeholders in intensity_lab/tools/notebook_cells.py
+     (ABLATION_PLACEHOLDER, SUMMARY_PLACEHOLDER) with conclusions written from
+     the real numbers, rebuild the notebook, and run it once more.
+
+COMMANDS (run from the repository root)
+---------------------------------------
+Step 1 - three parallel processes, 4 torch threads each:
+
+  .venv/bin/python -m intensity_lab.experiments gnn_agg_mean,gnn_loss_cos 4 > logs_reg1.txt 2>&1 &
+  .venv/bin/python -m intensity_lab.experiments gnn_graph_only,gnn_original_inputs 4 > logs_reg2.txt 2>&1 &
+  .venv/bin/python -m intensity_lab.experiments gnn_context,gnn_reg,gnn_deeper 4 > logs_reg3.txt 2>&1 &
+  grep DONE logs_reg*.txt          # each finished run prints one DONE line
+
+Step 2/3 - find the final name, then train its group (replace gnn if another wins):
+
+  .venv/bin/python -c "
+from intensity_lab.pipeline import load_data
+from intensity_lab import experiments as EXP
+from intensity_lab.train import train
+from intensity_lab.metrics import evaluate_bags, summarize
+d = load_data(verbose=False); V = d.splits['molecule']['val']
+s = {n: summarize(evaluate_bags(d.fs, V, train(d.fs, d.splits['molecule'], EXP.get(n), d.data_key(), verbose=False).predict(d.fs, V))).iloc[0]['cos'] for n in EXP.FINAL_CANDIDATES}
+print(s, '->', EXP.pick_final(s))"
+
+  .venv/bin/python -m intensity_lab.experiments final 4 gnn > logs_final.txt 2>&1 &
+  # (one process trains them one after another; or split the six configs across
+  #  three processes by name: gnn_seed1, gnn_seed2, gnn_scaffold, gnn_frac10, gnn_frac25, gnn_frac50)
+
+Step 4 - execute the notebook and keep its outputs:
+
+  .venv/bin/python intensity_lab/tools/run_notebook.py Experiment_1_agentic.ipynb
+  # or open it in VS Code with the .venv kernel and "Run All"
+
+Step 5 - edit intensity_lab/tools/notebook_cells.py, then:
+
+  .venv/bin/python intensity_lab/tools/build_notebook.py     # regenerates the .ipynb (outputs cleared)
+  .venv/bin/python intensity_lab/tools/run_notebook.py Experiment_1_agentic.ipynb
+
+PAUSING IS SAFE
+---------------
+* Finished runs are never retrained (file name = config hash).
+* Every epoch writes <run>.partial.pt; interrupting and re-running the same
+  command resumes after the last finished epoch with identical results
+  (tested with kill -9).
+* "Run All" in the notebook trains anything missing, so steps 1-3 can also be
+  done just by running the notebook (slower: one model at a time).
+
+IMPORTANT NOTES
+---------------
+* Do not edit a config in intensity_lab/experiments.py without expecting it to
+  retrain: its hash changes. Adding new configs is fine.
+* The notebook is GENERATED from intensity_lab/tools/notebook_cells.py. Edit the
+  cells there (or edit the notebook directly and stop using the builder).
+* Use DEVICE = "cpu" (benchmarked faster than MPS here).
+* Big generated folders you may want to keep out of git: data/agentic_cache/,
+  results/experiment_1_agentic/runs/ (I did not modify .gitignore).
+* Full findings so far: report.md

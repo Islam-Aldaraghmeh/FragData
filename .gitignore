@@ -1,14 +1,8 @@
 msnlib/
 __pycache__/
 .venv/
-vendor/ms-pred/
-checkpoints/
-best.ckpt
 .pytest_cache/
 .DS_Store
-results/experiment_2/dataset.pkl
-results/experiment_2_v2/dataset.pkl
-results/experiment_2_v2/dataset.tmp
 .vscode/
-Examples/
-GLACIER_RECOVERY_EXPLAINED.md
+data/
+results/experiment_1_agentic/runs/

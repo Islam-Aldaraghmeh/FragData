@@ -1,4 +1,0 @@
-Lightning automatically upgraded your loaded checkpoint from v1.6.5 to v2.5.6. To apply the upgrade to your files permanently, run `python -m pytorch_lightning.utilities.upgrade_checkpoint checkpoints/best.ckpt`
-/Users/islam/Desktop/MS_Pred_Research/MAGMA_Research/.venv/lib/python3.10/site-packages/torch/nn/modules/transformer.py:508: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/NestedTensorImpl.cpp:182.)
-  output = torch._nested_tensor_from_mask(
-{"cases": 1, "exact_predictions": 8, "fit_warning_counts": [4], "gallery_warnings": 4}
