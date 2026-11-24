@@ -67,30 +67,33 @@ def save_predictor(predictor, metrics=None, out_dir=FINAL_DIR):
     return out_dir
 
 
-def load_predictor(path=FINAL_DIR, fs_feature_names=None):
+def load_run(path, fs_feature_names=None):
+    """Load one trained run (a ``runs/*.pt`` file) without the training FeatureStore."""
     from .features import ATOM_FEATURE_NAMES, BOND_FEATURE_NAMES, candidate_feature_names
 
     path = Path(path)
-    manifest = json.loads((path / "manifest.json").read_text())
     names = fs_feature_names or candidate_feature_names()
-    runs = []
-    for member in manifest["runs"]:
-        saved = torch.load(path / member, weights_only=False, map_location="cpu")
-        cfg_dict = dict(saved["config"])
-        cfg_dict["features"] = tuple(cfg_dict.get("features", ()))
-        cfg_dict["drop_groups"] = tuple(cfg_dict.get("drop_groups", ()))
-        cfg = TrainConfig(**cfg_dict)
-        mask = np.array([n in set(saved["features"]) for n in names])
-        model = IntensityModel(int(mask.sum()), kind=cfg.kind, hidden=cfg.hidden, n_layers=cfg.n_layers,
-                               dropout=cfg.dropout, agg=cfg.agg, use_features=cfg.use_features,
-                               gnn_hidden=cfg.gnn_hidden, gnn_layers=cfg.gnn_layers,
-                               atom_dim=len(ATOM_FEATURE_NAMES), bond_dim=len(BOND_FEATURE_NAMES),
-                               context=bool(cfg.extra.get("context", False)),
-                        pool=cfg.extra.get("pool", "fragment+cuts"))
-        model.load_state_dict(saved["state_dict"])
-        model.eval()
-        runs.append(Run(cfg, model, saved["mean"], saved["std"], mask, saved["history"], path / member))
-    return EnsemblePredictor(runs)
+    saved = torch.load(path, weights_only=False, map_location="cpu")
+    cfg_dict = dict(saved["config"])
+    cfg_dict["features"] = tuple(cfg_dict.get("features", ()))
+    cfg_dict["drop_groups"] = tuple(cfg_dict.get("drop_groups", ()))
+    cfg = TrainConfig(**cfg_dict)
+    mask = np.array([n in set(saved["features"]) for n in names])
+    model = IntensityModel(int(mask.sum()), kind=cfg.kind, hidden=cfg.hidden, n_layers=cfg.n_layers,
+                           dropout=cfg.dropout, agg=cfg.agg, use_features=cfg.use_features,
+                           gnn_hidden=cfg.gnn_hidden, gnn_layers=cfg.gnn_layers,
+                           atom_dim=len(ATOM_FEATURE_NAMES), bond_dim=len(BOND_FEATURE_NAMES),
+                           context=bool(cfg.extra.get("context", False)),
+                           pool=cfg.extra.get("pool", "fragment+cuts"))
+    model.load_state_dict(saved["state_dict"])
+    model.eval()
+    return Run(cfg, model, saved["mean"], saved["std"], mask, saved["history"], path)
+
+
+def load_predictor(path=FINAL_DIR, fs_feature_names=None):
+    path = Path(path)
+    manifest = json.loads((path / "manifest.json").read_text())
+    return EnsemblePredictor([load_run(path / member, fs_feature_names) for member in manifest["runs"]])
 
 
 def predict_spectrum(predictor, spectrum, candidate_bags, collision_energy=None, return_store=False):

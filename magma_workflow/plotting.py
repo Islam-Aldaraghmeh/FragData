@@ -151,3 +151,50 @@ def plot_fragment_bags(candidate_bags, *, size=(260, 200), show_atom_indices=Fal
         'are not assigned. Scroll sideways to see every candidate.</p>'
         + ''.join(sections) + '</div>'
     )
+
+
+def plot_candidate_rows(fragments, mz=None, spectra=None, captions=None, *, measured=None,
+                        order=None, size=(240, 170)):
+    """Return notebook HTML: one row per candidate with its sketch, caption and optional spectra.
+
+    ``spectra[k]`` holds candidate k's heights at the shared ``mz`` values; every plot
+    uses the same axes. ``captions[k]`` (a string or a list of lines) is shown under
+    "Candidate k". ``measured`` adds a last column with the measured heights at ``mz``
+    (the same in every row). ``order`` lists the candidate indices top to bottom.
+    """
+    import base64
+    import io
+    from html import escape
+
+    import matplotlib.pyplot as plt
+    from IPython.display import HTML
+
+    fragments = list(fragments)
+    top = max([float(max(s)) for s in spectra] if spectra is not None else [0.0])
+    top = max(top, float(max(measured)) if measured is not None else 0.0) or 1.0
+
+    def chart(heights, label, color):
+        figure, ax = plt.subplots(figsize=(5.2, size[1] / 100))
+        ax.vlines(mz, 0, heights, color=color, linewidth=1.3)
+        ax.set_xlim(min(mz) - 5, max(mz) + 5)
+        ax.set_ylim(0, top * 1.05)
+        ax.set_xlabel("m/z")
+        ax.set_ylabel(label)
+        buffer = io.BytesIO()
+        figure.savefig(buffer, format="png", dpi=100, bbox_inches="tight")
+        plt.close(figure)
+        return '<td><img src="data:image/png;base64,' + base64.b64encode(buffer.getvalue()).decode() + '"></td>'
+
+    measured_cell = chart(measured, "measured MS3", "#1f4e9c") if measured is not None else ""
+    rows = []
+    for k in (range(len(fragments)) if order is None else order):
+        lines = [] if captions is None else ([captions[k]] if isinstance(captions[k], str) else list(captions[k]))
+        cells = [f'<td style="width:{size[0]}px">{_fragment_graph_svg(fragments[k], size, False)}</td>',
+                 f'<td style="padding:0 14px;white-space:nowrap"><b>Candidate {k}</b>'
+                 + ''.join(f'<br>{escape(str(line))}' for line in lines) + '</td>']
+        if spectra is not None:
+            cells.append(chart(spectra[k], "predicted", "black"))
+        rows.append('<tr style="border-bottom:1px solid #ddd;background:white;color:#222">'
+                    + ''.join(cells) + measured_cell + '</tr>')
+    return HTML('<table style="border-collapse:collapse;font-family:system-ui,sans-serif;font-size:13px">'
+                + ''.join(rows) + '</table>')

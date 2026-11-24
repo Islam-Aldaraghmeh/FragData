@@ -1,0 +1,48 @@
+{
+  "molecules_requested": 100,
+  "molecules_with_linked_peaks": 100,
+  "seed": 0,
+  "linked_peaks": 507,
+  "status_counts": {
+    "compared": 359,
+    "single_candidate": 89,
+    "no_candidate": 57,
+    "no_score": 2
+  },
+  "all_compared": {
+    "peaks": 359,
+    "match": 0.4233983286908078,
+    "chance": 0.2565724659936071
+  },
+  "our_top_unique": {
+    "peaks": 343,
+    "match": 0.4227405247813411,
+    "chance": 0.24623468473961085
+  },
+  "our_top_tied": {
+    "peaks": 16,
+    "match": 0.4375,
+    "chance": 0.4781886516261516
+  },
+  "our_top_unique_and_heuristic_unique": {
+    "peaks": 303,
+    "match": 0.4158415841584158,
+    "chance": 0.22763260883232236
+  },
+  "heuristic_tied": {
+    "peaks": 44,
+    "match": 0.4772727272727273,
+    "chance": 0.4012593967974983
+  },
+  "good_fit_cosine_at_least_0.7": {
+    "peaks": 132,
+    "match": 0.4090909090909091,
+    "chance": 0.26464506190335546
+  },
+  "mean_candidates": 7.83008356545961,
+  "mean_fit_cosine": 0.6367171324471613,
+  "mean_ms3_explainable": 0.8855650612190347,
+  "mean_size_of_our_tied_top": 2.75,
+  "mean_our_score_on_heuristic_pick": 0.39728237754976903,
+  "heuristic_pick_gets_zero_from_us": 0.42896935933147634
+}

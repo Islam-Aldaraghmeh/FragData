@@ -196,6 +196,44 @@ def _magma_fragment_graph(engine, fragment_mask):
     return _canonical_graph({"atoms": atoms, "bonds": bonds}), keep
 
 
+def deepen_fragments(engine, masks, depth=3):
+    """Enumerate the pieces of the given fragments, ``depth`` atom-removal steps from each.
+
+    FragmentEngine.generate_fragments counts its depth limit from the whole molecule
+    and keeps one fragment per WL hash, so a fragment's own pieces can be missing:
+    too deep from the root, or merged with a look-alike elsewhere in the molecule.
+    Here every piece is kept by its exact atoms. Entries the engine already has are
+    left untouched; new ones get the same fields under a hash@mask key.
+    """
+    known = {int(entry["frag"]) for entry in engine.frag_to_entry.values()}
+    for mask in masks:
+        mask = int(mask)
+        seed = engine.frag_to_entry.get(engine.wl_hash(mask))  # only its counters are reused
+        level = [(mask, seed["max_broken"] if seed else 0, seed["tree_depth"] if seed else 0)]
+        seen = {mask}
+        for _ in range(depth):
+            next_level = []
+            for fragment, broken, tree_depth in level:
+                for atom in range(engine.natoms):
+                    for found in engine.remove_atom(fragment, atom):
+                        piece = int(found["new_frag"])
+                        if piece in seen:
+                            continue
+                        seen.add(piece)
+                        piece_broken = broken + found["rm_bond_t"]
+                        next_level.append((piece, piece_broken, tree_depth + 1))
+                        if piece in known:
+                            continue
+                        known.add(piece)
+                        entry = {"frag": piece, "id": len(engine.frag_to_entry), "parents": [],
+                                 "parent_hashes": [], "parent_ind_removed": [], "sibling_hashes": [],
+                                 "max_broken": piece_broken, "tree_depth": tree_depth + 1,
+                                 "score": engine.score_fragment(piece)[1]}
+                        entry.update(engine.atom_pass_stats(piece, depth=piece_broken))
+                        engine.frag_to_entry[f"{found['new_hash']}@{piece}"] = entry
+            level = next_level
+
+
 def assign_candidates_to_nearest_peak(candidate_bags):
     """Assign each exact fragment identity to its nearest already-matched peak.
 
@@ -252,8 +290,13 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
                        mz_tolerance=0.005,
                        ppm_tolerance=20.0, max_tree_depth=3, max_broken_bonds=6,
                        max_boundary_cuts=6, ms3_mz_tolerance=0.01,
-                       peak_assignment="all", include_ms3=True):
+                       peak_assignment="all", include_ms3=True, deepen_from=None,
+                       deepen_depth=3):
     """Run MAGMa and return [(peak_mz, [FragmentCandidate], [MS3 Spectrum])].
+
+    deepen_from (fragment masks) also enumerates the pieces of those fragments,
+    deepen_depth steps from each (see deepen_fragments); use it to match an MS3
+    peak list against the pieces of the isolated ion's candidates.
 
     Related scans come from spectra/forest, or set_spectrum_source context by default.
     Each candidate.ms3_spectra references its bag's measured MS3 list.
@@ -306,6 +349,8 @@ def get_candidate_bags(spectrum, spectra=None, *, forest=None,
     if not len(mzs):
         return []
     engine.generate_fragments()
+    if deepen_from:
+        deepen_fragments(engine, deepen_from, deepen_depth)
     tolerances = np.maximum(mz_tolerance, ppm_tolerance * mzs * 1e-6)
     per_peak = [{} for _ in mzs]
     graph_cache = {}

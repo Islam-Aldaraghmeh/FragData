@@ -1,0 +1,70 @@
+{
+  "split": "val",
+  "model": "gnn-065516a1d21d.pt",
+  "heights": "model",
+  "ms2_parents": 1039,
+  "skipped": 8,
+  "linked_peaks": 4615,
+  "status_counts": {
+    "resolvable": 3319,
+    "single_candidate": 662,
+    "no_candidate": 499,
+    "indistinguishable": 89,
+    "unsupported": 43,
+    "no_ms3_fragments": 3
+  },
+  "fit_cosine": {
+    "median": 0.7141089897893083,
+    "share_at_least_0.7": 0.5213759213759214,
+    "mean_unexplained_fraction": 0.1830102132739989
+  },
+  "predictor_on_single_candidate_ms3": {
+    "all": {
+      "cos_mixture": 0.5851908338142056,
+      "cos_equal_heights": 0.5497568391649534,
+      "cos_unrestricted_model": 0.6372966202732471,
+      "cos_mixture_supported": 0.6800018406506511,
+      "cos_equal_heights_supported": 0.6457228342296013,
+      "supported_fraction": 0.7572023977214862
+    },
+    "ce_20": {
+      "cos_mixture": 0.636422930152349,
+      "cos_equal_heights": 0.5890611792131071,
+      "cos_unrestricted_model": 0.7129202152019064,
+      "cos_mixture_supported": 0.7543574987550243,
+      "cos_equal_heights_supported": 0.694140409561388,
+      "supported_fraction": 0.7393400432258902,
+      "scans": 626
+    },
+    "ce_40": {
+      "cos_mixture": 0.5900842213012063,
+      "cos_equal_heights": 0.5290605744209623,
+      "cos_unrestricted_model": 0.6343650523820952,
+      "cos_mixture_supported": 0.6845944559212132,
+      "cos_equal_heights_supported": 0.6242274258333296,
+      "supported_fraction": 0.7669240040192271,
+      "scans": 652
+    },
+    "ce_60": {
+      "cos_mixture": 0.5300080780251568,
+      "cos_equal_heights": 0.5323694334418517,
+      "cos_unrestricted_model": 0.5662027420880991,
+      "cos_mixture_supported": 0.6166275902874335,
+      "cos_equal_heights_supported": 0.6288218493484649,
+      "supported_fraction": 0.7647819698781626,
+      "scans": 639
+    }
+  },
+  "resolvable_peaks": {
+    "n": 3319,
+    "mean_groups": 5.311840915938536,
+    "mean_top_weight": 0.7302581944463694,
+    "share_top_weight_at_least_0.8": 0.40765290750225974,
+    "ms3_scans_agree_on_top": 0.5080239273927393,
+    "ms3_scan_weight_distance": 0.458944930235278,
+    "ms2_model_agrees_with_ms3": 0.512805061765592,
+    "fewest_cuts_agrees_with_ms3": 0.5283824014691745,
+    "chance_agreement": 0.261830401294221,
+    "ms2_model_share_on_ms3_top": 0.4604902829115199
+  }
+}

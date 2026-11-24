@@ -105,8 +105,9 @@ def _count_matmul(a, b):
 def _featurize_one(args):
     """Features for one spectrum (runs in a worker process)."""
     ex, engine_smiles = args
-    g = mol_graph(engine_smiles)
-    g_orig = mol_graph(ex["smiles"])
+    # ex["graph"] replaces the SMILES-derived root graph (e.g. a fragment used as the input molecule).
+    g = ex.get("graph") or mol_graph(engine_smiles)
+    g_orig = g if "graph" in ex else mol_graph(ex["smiles"])
     n = g["n_atoms"]
     el = g["element"]
     atom = g["atom"]
@@ -118,6 +119,8 @@ def _featurize_one(args):
     adduct_mh = ex["adduct"] == "[M+H]+"
     prec = dict(root)
     prec["H"] += int(adduct_mh)
+    if "precursor_formula" in ex:  # ion formula of a fragment used as the input molecule
+        prec = dict(ex["precursor_formula"])
     prec_vec = _formula_vector(prec)
 
     cands = [(bag_i, c) for bag_i, bag in enumerate(ex["bags"]) for c in bag[3]]

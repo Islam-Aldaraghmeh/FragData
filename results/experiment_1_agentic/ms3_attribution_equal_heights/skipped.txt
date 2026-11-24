@@ -1,0 +1,8 @@
+mzspec:MSV000094528:20240502_pluskal_enamine_5008_C16_id_MSn_positive:608: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5008_J13_id_MSn_positive:340: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5010_P18_id_MSn_positive:320: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5007_G22_id_MSn_positive:377: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5009_F18_id_MSn_positive:650: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5009_D15_id_MSn_positive:360: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5007_I14_id_MSn_positive:356: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
+mzspec:MSV000094528:20240502_pluskal_enamine_5007_K11_id_MSn_positive:197: Supported precursors have charge +1 and adduct [M+H]+ or [M]+.
